@@ -1,0 +1,9 @@
+S := <fe>;
+<fe> := <f0> | 
+        <f1> "(" <fe> ")" | 
+        <f2> "(" <fe> "," <fe> ")";
+        <f2> "(" <fe> "," <fe> ")";
+<f0> := //R// variableNamesLHS("D", k=k) //R// ; 
+ //R// sym2pairs("<fe>", "D", k=k) //R//
+<f1> := "NOT"; 
+<f2> := "OR" | "AND" ; 

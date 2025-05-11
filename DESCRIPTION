@@ -1,0 +1,36 @@
+Package: xegaCE
+Title: Computational Experiments 
+Version: 0.9.0.0
+Authors@R: 
+    person(given = "Andreas",
+           family = "Geyer-Schulz",
+           role = c("aut", "cre"),
+           email = "Andreas.Geyer-Schulz@kit.edu",
+           comment = c(ORCID = "0009-0000-5237-3579"))
+Description: The execution of a computational experiment 
+             has three phases, all of which are 
+             supported: (1) The repeated execution of the trials of a treatment 
+             of an experiment is supported by one command dispatcher
+             which records and summarizes the parameters of a treatment 
+             and its repeated trials in periodic snapshots. 
+             (2) Snapshots are merged, one data set for each treatment.
+             (3) For report writing, a small language is provided,
+             for generating descriptive statistics, hypothesis tests, 
+             and a few graphics.     
+License: MIT + file LICENSE
+URL: https://github.com/ageyerschulz/kSymmetry
+Encoding: UTF-8
+LazyData: false
+RoxygenNote: 7.3.2
+Depends: R (>= 3.5.0)
+Imports: 
+        grDevices,
+        graphics,
+        igraph, 
+        xtable,
+        smoof,
+        xegaBNF,
+        xegaDerivationTrees,
+        xega
+Suggests: 
+        testthat (>= 3.0.0)

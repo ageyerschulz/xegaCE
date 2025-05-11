@@ -1,0 +1,10 @@
+S := <fe>;
+<fe> := <f0> | 
+        <f1> "(" <fe> ")" | 
+        <f2> "(" <fe> "," <fe> ")";
+<fe> := "OR(AND(" <f0> "," <f0> "),AND(NOT(" <f0> "),NOT(" <f0> ")))" ;
+<f2> := "OR" | "AND"; 
+<f2> := "OR"; 
+<f1> := "NOT"; 
+<f0> := //R// variableNamesLHS("D", k=k) //R// ;
+

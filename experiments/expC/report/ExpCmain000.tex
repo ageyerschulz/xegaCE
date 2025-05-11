@@ -1,0 +1,70 @@
+\documentclass[18pt,c]{beamer}
+\makeatletter
+\let\beamer@writeslidentry@miniframeson=\beamer@writeslidentry
+\def\beamer@writeslidentry@miniframesoff{%
+  \expandafter\beamer@ifempty\expandafter{\beamer@framestartpage}{}% does not happen normally
+  {%else
+    % removed \addtocontents commands
+   \clearpage\beamer@notesactions%
+  }
+}
+\newcommand*{\miniframeson}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframeson}
+\newcommand*{\miniframesoff}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframesoff}
+\makeatother
+% yellow
+\definecolor{goldenyellow}{rgb}{1.0, 0.87, 0.0}
+\definecolor{electricyellow}{rgb}{1.0, 1.0, 0.0}
+\definecolor{icterine}{rgb}{0.99, 0.97, 0.37}
+\definecolor{flavescent}{rgb}{0.97, 0.91, 0.56}
+\definecolor{lemon}{rgb}{1.0, 0.97, 0.0}
+% orange
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
+\definecolor{internationalorange}{rgb}{1.0, 0.31, 0.0}
+% red
+\definecolor{ferrarired}{rgb}{1.0, 0.11, 0.0}
+\definecolor{fireenginered}{rgb}{0.81, 0.09, 0.13}
+\definecolor{cadmiumred}{rgb}{0.89, 0.0, 0.13}
+% blue
+\definecolor{ao}{rgb}{0.0, 0.5, 0.0}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91}
+\definecolor{blue}{rgb}{0.0, 0.0, 1.0}
+\definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+\definecolor{darkmidnightblue}{rgb}{0.0, 0.2, 0.4}
+\definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
+\definecolor{deepskyblue}{rgb}{0.0, 0.75, 1.0}
+\definecolor{iris}{rgb}{0.35, 0.31, 0.81}
+\definecolor{navyblue}{rgb}{0.0, 0.0, 0.5}
+\definecolor{ultramarine}{rgb}{0.07, 0.04, 0.56}
+\definecolor{electricultramarine}{rgb}{0.25, 0.0, 1.0}
+% green
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
+\usetheme{Berlin}
+\usecolortheme{default}
+\usefonttheme{default}
+\setbeamerfont{frametitle}{size=\footnotesize}
+\usepackage{graphicx}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\floatpagefraction}{1.0}
+\begin{document}
+\title{Report of Experiment ExpC. 3-Symmetry: Replay. }
+\author{Andreas Geyer-Schulz}
+\date{\today}
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}
+\frametitle{Abstract}
+This experiment tests exact replication and stochastic replication
+for {\tt xegaRun} of R-package {\tt xega}.
+In the experiment, the 3-symmetry problem is solved
+by grammar-based genetic programming for fixed seeding and for
+Rs system seeding (option {\tt replay} of {\tt xegaRun}).%\end{abstract}
+\end{frame}
+\begin{frame}[t, allowframebreaks]
+\frametitle{Contents}
+\tableofcontents[subsubsectionstyle=hide]
+\vfill
+\end{frame}

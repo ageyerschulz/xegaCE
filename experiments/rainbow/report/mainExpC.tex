@@ -1,0 +1,1076 @@
+% report/ExpCmain000.tex
+\documentclass[18pt,c]{beamer}
+\usetheme{Berlin}
+\usecolortheme{default}
+
+% yellow
+\definecolor{goldenyellow}{rgb}{1.0, 0.87, 0.0}
+\definecolor{electricyellow}{rgb}{1.0, 1.0, 0.0}
+\definecolor{icterine}{rgb}{0.99, 0.97, 0.37}
+\definecolor{flavescent}{rgb}{0.97, 0.91, 0.56}
+\definecolor{lemon}{rgb}{1.0, 0.97, 0.0}
+% orange
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
+\definecolor{internationalorange}{rgb}{1.0, 0.31, 0.0}
+% red
+\definecolor{ferrarired}{rgb}{1.0, 0.11, 0.0}
+\definecolor{fireenginered}{rgb}{0.81, 0.09, 0.13}
+\definecolor{cadmiumred}{rgb}{0.89, 0.0, 0.13}
+% blue
+\definecolor{ao}{rgb}{0.0, 0.5, 0.0}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91} 	
+\definecolor{blue}{rgb}{0.0, 0.0, 1.0}
+\definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+\definecolor{darkmidnightblue}{rgb}{0.0, 0.2, 0.4}
+\definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}	
+\definecolor{deepskyblue}{rgb}{0.0, 0.75, 1.0}
+\definecolor{iris}{rgb}{0.35, 0.31, 0.81}
+\definecolor{navyblue}{rgb}{0.0, 0.0, 0.5}
+\definecolor{ultramarine}{rgb}{0.07, 0.04, 0.56}
+\definecolor{electricultramarine}{rgb}{0.25, 0.0, 1.0}
+% green
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
+%\usecolortheme[colors={ao, babyblueeyes, bleudefrance, blue, cobalt, 
+%                       darkmidnightblue, brandeisblue, deepskyblue},
+%auto=section]{rainbow}
+%\AtBeginDocument{
+%  \setcounter{rainbow@count}{1}
+%  \rainbow
+%}
+\setbeamercolor{structure}{fg=darkpastelgreen}
+%\setbeamercolor{titlelike}{bg=ultramarine}
+%\setbeamercolor{separation line}{bg=darkmidnightblue}
+%\setbeamercolor{mini frames}{use=darkmidnightblue}
+%\setbeamercolor{mini frame}{bg=cobalt}
+
+\usefonttheme{default}
+\setbeamerfont{frametitle}{size=\footnotesize}
+\usepackage{graphicx}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\floatpagefraction}{1.0}
+\begin{document}
+\title{Report of Experiment ExpC. 3-Symmetry: Replay. }
+\author{Andreas Geyer-Schulz}
+\date{\today}
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}
+\frametitle{Abstract}
+This experiment tests exact replication and stochastic replication
+for {\tt xegaRun} of R-package {\tt xega}.
+In the experiment, the 3-symmetry problem is solved
+by grammar-based genetic programming for fixed seeding and for
+Rs system seeding (option {\tt replay} of {\tt xegaRun}).%\end{abstract}
+\end{frame}
+\begin{frame}[t, allowframebreaks]
+\frametitle{Contents}
+\tableofcontents[subsubsectionstyle=hide]
+\vfill
+\end{frame}
+% report/ExpCmain001.tex
+\clearpage
+\section{Design of Experiment}
+% report/ExpCmain002.tex
+\begin{frame}
+\vspace*{2mm}
+\begin{block}{
+Definitions
+}
+{\bf Exact replicability} of a computational experiment means
+that the experiment procudes in each trial {\bf identical}
+numerical result.
+ 
+{\bf Stochastic replicability} of a computational experiment means
+that the experiment procudes in each trial the same 
+expected result.
+\end{block}
+\end{frame}% report/ExpCmain003.tex
+\begin{frame}
+\vspace*{2mm}
+\begin{block}{
+Description of Experiment
+}
+The purpose of this computational experiment is to show the difference
+between {\bf exact} and {\bf stochastic} replicability of the experiment.
+ 
+The {\bf problem environment} is the 3-symmetry problem: 
+Finding a boolean expression (with and, or, and not)
+which is TRUE for symmetric 3-bit strings.
+ 
+The {\bf solution method} is grammar-based genetic programming
+(option {\tt algorithm="sgp"}  of {\tt xegaRun}).
+The {\bf solver} used is {\tt xegaRun} from the R-package {\tt xega}.
+ 
+The experiment consists of 4 treatments, two for each choice of seeding.
+\end{block}
+\end{frame}% report/ExpCmain004.tex
+% ExpC
+% Table: Common Parameters of Experiment ExpC
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Common Parameters of Experiment ExpC }
+\input{ExpCCommonTable000.tex}
+ \label{ExpCCommonTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCCommonTable000.tex}  
+% report/ExpCmain005.tex
+% ExpC
+% Table: Common Parameters of Experiment ExpC
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Common Parameters of Experiment ExpC }
+\input{ExpCCommonTable001.tex}
+ \label{ExpCCommonTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCCommonTable001.tex}  
+% report/ExpCmain006.tex
+% ExpC
+% Table: Parameters of Treatments of Experiment ExpC
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Parameters of Treatments of Experiment ExpC }
+\input{ExpCDifferentTable000.tex}
+ \label{ExpCDifferentTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCDifferentTable000.tex}  
+% report/ExpCmain007.tex
+% ExpC
+% Table: The Production Table of Experiment ExpC
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Production Table of Experiment ExpC }
+\input{ExpCGrammarTable000.tex}
+ \label{ExpCGrammarTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCGrammarTable000.tex}  
+% report/ExpCmain008.tex
+\begin{frame}
+\vspace*{2mm}
+\begin{block}{
+
+}
+Treatments 1 and 2 test the seeding of the random number generator in xegaRun:
+ 
+Repetition of a treatment should produce exactly the same result.
+But different seeds should lead to different results.
+ 
+Treatments 3 and 4 use the system seed of the random number generator:
+ 
+Repetitions produce random results.
+ 
+We expect that for enough trials both treatments have the same mean performance.
+\end{block}
+\end{frame}% report/ExpCmain009.tex
+\clearpage
+\section{Exploratory Analysis}
+% report/ExpCmain010.tex
+\subsection{Do we {\bf always} solve the 3 symmetry problem?}
+% report/ExpCmain011.tex
+\begin{frame}
+\vspace*{2mm}
+\begin{block}{
+Observation
+}
+In this experiment, the 3-symmetry problem is {\bf always} correctly solved.
+ 
+{\bf Evidence:}
+In all trials of all treatments the optimal fitness of $0$ was reached.
+See next table.
+\end{block}
+\end{frame}% report/ExpCmain012.tex
+% ExpC
+% Table: Fitness (Number of errors).
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Fitness (Number of errors). }
+\input{ExpCStatsTable000.tex}
+ \label{ExpCStatsTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCStatsTable000.tex}  
+% report/ExpCmain013.tex
+\subsection{Time of Treatments in Seconds}
+% report/ExpCmain014.tex
+% ExpC
+% Figure: 3-Symmetry: Replay. 
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \frametitle{ 3-Symmetry: Replay.  }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpCboxplottSeconds000.eps}
+ \end{center}
+ \label{ExpCboxplottSeconds000.eps}  
+ \end{frame}
+
+% report/ExpCmain015.tex
+% ExpC
+% Table: Time (s).
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Time (s). }
+\input{ExpCStatsTable001.tex}
+ \label{ExpCStatsTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCStatsTable001.tex}  
+% report/ExpCmain016.tex
+% ExpC
+% Figure: 3-Symmetry: Replay. 
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \frametitle{ 3-Symmetry: Replay.  }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpCboxplottSeconds001.eps}
+ \end{center}
+ \label{ExpCboxplottSeconds001.eps}  
+ \end{frame}
+
+% report/ExpCmain017.tex
+\begin{frame}
+\vspace*{2mm}
+\begin{block}{
+Conclusion
+}
+The execution time (in seconds) does not allow to identify deterministic results,
+because it may depend on other system activity e.g. I/O operations.
+ 
+{\bf Evidence:}
+The time variation in execution time for all treatments.
+\end{block}
+\end{frame}% report/ExpCmain018.tex
+\clearpage
+\subsection{Number of Generations of Treatments}
+% report/ExpCmain019.tex
+% ExpC
+% Figure: 3-Symmetry: Replay. 
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \frametitle{ 3-Symmetry: Replay.  }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpCboxplottGenerations000.eps}
+ \end{center}
+ \label{ExpCboxplottGenerations000.eps}  
+ \end{frame}
+
+% report/ExpCmain020.tex
+% ExpC
+% Table: Generations
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Generations }
+\input{ExpCStatsTable002.tex}
+ \label{ExpCStatsTable002.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCStatsTable002.tex}  
+% report/ExpCmain021.tex
+% ExpC
+% Figure: 3-Symmetry: Replay. 
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \frametitle{ 3-Symmetry: Replay.  }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpCboxplottGenerations001.eps}
+ \end{center}
+ \label{ExpCboxplottGenerations001.eps}  
+ \end{frame}
+
+% report/ExpCmain022.tex
+\begin{frame}
+\vspace*{2mm}
+\begin{block}{
+Observation
+}
+The number of generations needed allows to recognize randomness
+because of non-zero standard deviation.
+ 
+The number of generations indicates determinism,
+if the standard deviation is $0$.
+\end{block}
+\end{frame}% report/ExpCmain023.tex
+\clearpage
+\section{Testing of Effects}
+% report/ExpCmain024.tex
+\subsection{Exact Replicability}
+% report/ExpCmain025.tex
+% ExpC
+% Table: Distribution of the variable Generations for repeated trials.
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Distribution of the variable Generations for repeated trials. }
+\input{ExpCStatsTable003.tex}
+ \label{ExpCStatsTable003.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCStatsTable003.tex}  
+% report/ExpCmain026.tex
+\begin{frame}
+\vspace*{2mm}
+\begin{block}{
+Result
+}
+Each treatment is deterministic.
+ 
+{\bf Evidence:}
+ 
+The standard deviation $sd$ of each treatment is $0.00$
+(for any number of trials).
+ 
+Only 1 solution is found by repeated trials.
+ 
+Different seeds (may) result in different results:
+One treatment needs 1 generation, the other 2 generations to reach the optimum.
+\end{block}
+\end{frame}% report/ExpCmain027.tex
+\subsection{Stochastic Replicability}
+% report/ExpCmain028.tex
+% ExpC
+% Figure: Comparing a treatment and its repetition. Hypothesis: Equal expected mean number of generations.
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \frametitle{ Comparing a treatment and its repetition. Hypothesis: Equal expected mean number of generations. }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpCboxplottGenerations002.eps}
+ \end{center}
+ \label{ExpCboxplottGenerations002.eps}  
+ \end{frame}
+
+% report/ExpCmain029.tex
+% ExpC
+% Figure: Comparing a treatment and its repetition. Hypothesis: Equal expected mean number of generations.
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \frametitle{ Comparing a treatment and its repetition. Hypothesis: Equal expected mean number of generations. }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpCboxplottGenerations003.eps}
+ \end{center}
+ \label{ExpCboxplottGenerations003.eps}  
+ \end{frame}
+
+% report/ExpCmain030.tex
+% ExpC
+% Table: Distribution of the variable Generations for repeated trials.
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Distribution of the variable Generations for repeated trials. }
+\input{ExpCStatsTable004.tex}
+ \label{ExpCStatsTable004.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCStatsTable004.tex}  
+% report/ExpCmain031.tex
+\begin{frame}[t]
+ \frametitle{Is variable Generations of treatment BoolT1SGPreplayZa normal?}
+ {\bf Normality Test.} The normality of variable Generations of treatment BoolT1SGPreplayZa of experiment ExpC is tested at a significance level 0.05.
+
+ Outliers are not removed (coef=0).
+ 
+ The test-statistic W of the Shapiro-Wilk normality test is 0.541 with a p-value of 0 .
+ Since the p-value 0 is below or equal the significance level $\alpha= 0.05 $,
+ variable {\bf  Generations } of treatment {\bf  BoolT1SGPreplayZa } of experiment ExpC  is {\bf significantly different} from a normal distribution.
+
+ \end{frame}
+% report/ExpCmain032.tex
+\begin{frame}[t]
+ \frametitle{Is variable Generations of treatment BoolT1SGPreplayZb normal?}
+ {\bf Normality Test.} The normality of variable Generations of treatment BoolT1SGPreplayZb of experiment ExpC is tested at a significance level 0.05.
+
+ Outliers are not removed (coef=0).
+ 
+ The test-statistic W of the Shapiro-Wilk normality test is 0.554 with a p-value of 0 .
+ Since the p-value 0 is below or equal the significance level $\alpha= 0.05 $,
+ variable {\bf  Generations } of treatment {\bf  BoolT1SGPreplayZb } of experiment ExpC  is {\bf significantly different} from a normal distribution.
+
+ \end{frame}
+% report/ExpCmain033.tex
+\begin{frame}
+ Because  of the non-normality of variable Generations 
+a two sample Wilcoxon test is used for comparing the means 
+of the variable Generations of the treatments.
+ \end{frame}
+% report/ExpCmain034.tex
+\begin{frame}[t]
+ \frametitle{Test of $H_{0}$: Means of treatments BoolT1SGPreplayZa and BoolT1SGPreplayZb of variable Generations are equal. }
+ \scriptsize
+ For variable Generations of treatments BoolT1SGPreplayZa and BoolT1SGPreplayZb of experiment ExpC:
+
+\vspace{1mm}
+{\bf Hypothesis 0}: mean(Generations of BoolT1SGPreplayZa) - mean(Generations of BoolT1SGPreplayZb) is equal to 0.
+
+
+ \begin{center} is tested at a significance level 0.05 against: \end{center}
+
+{\bf Hypothesis 1}: mean(Generations of BoolT1SGPreplayZa) - mean(Generations of BoolT1SGPreplayZb) is not equal to 0.
+\vspace{1mm}
+\vspace{1mm}
+
+ Outliers of treatment BoolT1SGPreplayZa  are not removed (coef=0).
+
+ Outliers of treatment BoolT1SGPreplayZb  are not removed (coef=0).
+\vspace{1mm}
+ 
+ The test-statistic W of the Wilcoxon rank sum test with continuity correction is 4998 with a p-value of 0.995 .
+ Since the p-value 0.995 is above the significance level $\alpha= 0.05 $,
+ for variable Generations of treatments BoolT1SGPreplayZa and BoolT1SGPreplayZb of experiment ExpC 
+ {\bf Hypothesis 0}: mean(Generations of BoolT1SGPreplayZa) - mean(Generations of BoolT1SGPreplayZb) is equal to 0.
+is {\bf accepted}.
+
+ \end{frame}
+% report/ExpCmain035.tex
+\begin{frame}[t]
+ \frametitle{Is variable Generations of treatment BoolT1SGPreplayZa normal?}
+ {\bf Normality Test.} The normality of variable Generations of treatment BoolT1SGPreplayZa of experiment ExpC is tested at a significance level 0.05.
+
+ 8 outliers removed (coef=1.5).
+ 
+ The test-statistic W of the Shapiro-Wilk normality test is 0.543 with a p-value of 0 .
+ Since the p-value 0 is below or equal the significance level $\alpha= 0.05 $,
+ variable {\bf  Generations } of treatment {\bf  BoolT1SGPreplayZa } of experiment ExpC  is {\bf significantly different} from a normal distribution.
+
+ \end{frame}
+% report/ExpCmain036.tex
+\begin{frame}[t]
+ \frametitle{Is variable Generations of treatment BoolT1SGPreplayZb normal?}
+ {\bf Normality Test.} The normality of variable Generations of treatment BoolT1SGPreplayZb of experiment ExpC is tested at a significance level 0.05.
+
+ 6 outliers removed (coef=1.5).
+ 
+ The test-statistic W of the Shapiro-Wilk normality test is 0.576 with a p-value of 0 .
+ Since the p-value 0 is below or equal the significance level $\alpha= 0.05 $,
+ variable {\bf  Generations } of treatment {\bf  BoolT1SGPreplayZb } of experiment ExpC  is {\bf significantly different} from a normal distribution.
+
+ \end{frame}
+% report/ExpCmain037.tex
+\begin{frame}
+ Because  of the non-normality of variable Generations 
+a two sample Wilcoxon test is used for comparing the means 
+of the variable Generations of the treatments.
+ \end{frame}
+% report/ExpCmain038.tex
+\begin{frame}[t]
+ \frametitle{Test of $H_{0}$: Means of treatments BoolT1SGPreplayZa and BoolT1SGPreplayZb of variable Generations are equal. }
+ \scriptsize
+ For variable Generations of treatments BoolT1SGPreplayZa and BoolT1SGPreplayZb of experiment ExpC:
+
+\vspace{1mm}
+{\bf Hypothesis 0}: mean(Generations of BoolT1SGPreplayZa) - mean(Generations of BoolT1SGPreplayZb) is equal to 0.
+
+
+ \begin{center} is tested at a significance level 0.05 against: \end{center}
+
+{\bf Hypothesis 1}: mean(Generations of BoolT1SGPreplayZa) - mean(Generations of BoolT1SGPreplayZb) is not equal to 0.
+\vspace{1mm}
+\vspace{1mm}
+
+ 8 outliers of treatment BoolT1SGPreplayZa are removed (coef=1.5).
+
+ 6 outliers of treatment BoolT1SGPreplayZb are removed (coef=1.5).
+\vspace{1mm}
+ 
+ The test-statistic W of the Wilcoxon rank sum test with continuity correction is 4220 with a p-value of 0.708 .
+ Since the p-value 0.708 is above the significance level $\alpha= 0.05 $,
+ for variable Generations of treatments BoolT1SGPreplayZa and BoolT1SGPreplayZb of experiment ExpC 
+ {\bf Hypothesis 0}: mean(Generations of BoolT1SGPreplayZa) - mean(Generations of BoolT1SGPreplayZb) is equal to 0.
+is {\bf accepted}.
+
+ \end{frame}
+% report/ExpCmain039.tex
+\begin{frame}
+\vspace*{2mm}
+\begin{block}{
+Result
+}
+Each treatment produces a sample drawn from the {\bf same} random process.
+ 
+{\bf Evidence:}
+ 
+The standard deviation $sd$ of each treatment is {\bf not} $0.00$
+(for any number of trials).
+ 
+The treatments find 14 and 17 {\bf different, but equivalent} boolean expressions.
+(See solution tables in section B Treatements.)
+ 
+Different seeds (may) result in {\bf different samples}:
+ 
+The hypothesis test {\bf supports} the conjecture
+that the sample means of the variable Generations of the treatments are equal.
+This implies that the two treatments come from the same random process.
+\end{block}
+\end{frame}% report/ExpCmain040.tex
+\clearpage
+\section{A Summary}
+% report/ExpCmain041.tex
+% ExpC
+% Table: Summary of statistics of experiment ExpC.
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Summary of statistics of experiment ExpC. }
+\input{ExpCStatsTable005.tex}
+ \label{ExpCStatsTable005.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCStatsTable005.tex}  
+% report/ExpCmain042.tex
+% ExpC
+% Table: Summary of statistics of experiment ExpC.
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Summary of statistics of experiment ExpC. }
+\input{ExpCStatsTable006.tex}
+ \label{ExpCStatsTable006.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCStatsTable006.tex}  
+% report/ExpCmain043.tex
+\clearpage
+\section{B Treatments}
+% report/ExpCmain044.tex
+\clearpage
+\subsection{Treatment BoolT1SGPreplayXIII}
+% report/ExpCmain045.tex
+% ExpC
+% Table:  Parameters of treatment: BoolT1SGPreplayXIII 
+
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT1SGPreplayXIII 
+ }
+\input{ExpCtParmTable000.tex}
+ \label{ExpCtParmTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable000.tex}  
+% report/ExpCmain046.tex
+% ExpC
+% Table:  Parameters of treatment BoolT1SGPreplayXIII passed to xegaRun
+
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT1SGPreplayXIII passed to xegaRun
+ }
+\input{ExpCtParmTable001.tex}
+ \label{ExpCtParmTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable001.tex}  
+% report/ExpCmain047.tex
+% ExpC
+% Table:  Parameters of treatment BoolT1SGPreplayXIII passed to xegaRun
+
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT1SGPreplayXIII passed to xegaRun
+ }
+\input{ExpCtParmTable002.tex}
+ \label{ExpCtParmTable002.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable002.tex}  
+% report/ExpCmain048.tex
+% ExpC
+% Table:  Parameters of treatment BoolT1SGPreplayXIII passed to xegaRun
+
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT1SGPreplayXIII passed to xegaRun
+ }
+\input{ExpCtParmTable003.tex}
+ \label{ExpCtParmTable003.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable003.tex}  
+% report/ExpCmain049.tex
+% ExpC
+% Table: Treatment: BoolT1SGPreplayXIII
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT1SGPreplayXIII }
+\input{ExpCStatsTable007.tex}
+ \label{ExpCStatsTable007.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCStatsTable007.tex}  
+% report/ExpCmain050.tex
+% ExpC
+% Table: The Solution Table of Treatment BoolT1SGPreplayXIII of Experiment ExpC. Fit: 0. Unique Shortest Solutions: 1.
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT1SGPreplayXIII of Experiment ExpC. Fit: 0. Unique Shortest Solutions: 1. }
+\input{ExpCSolutionTable000.tex}
+ \label{ExpCSolutionTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCSolutionTable000.tex}  
+% report/ExpCmain051.tex
+% ExpC
+% Figure: The Derivation Tree of a Solution of Treatment BoolT1SGPreplayXIII of Experiment ExpC
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT1SGPreplayXIII of Experiment ExpC }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpCDerivationTreeFigure000.pdf}
+ \end{center}
+ \label{report/ExpCDerivationTreeFigure000.pdf}  
+ \end{frame}
+
+% report/ExpCmain052.tex
+% ExpC
+% Figure: Plot of last xegaRun for Treatment BoolT1SGPreplayXIII of Experiment ExpC
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT1SGPreplayXIII of Experiment ExpC }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpCPlotPopStatsFigure000.eps}
+ \end{center}
+ \label{report/ExpCPlotPopStatsFigure000.eps}  
+ \end{frame}
+
+% report/ExpCmain053.tex
+\clearpage
+\subsection{Treatment BoolT1SGPreplayXIX}
+% report/ExpCmain054.tex
+% ExpC
+% Table:  Parameters of treatment: BoolT1SGPreplayXIX 
+
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT1SGPreplayXIX 
+ }
+\input{ExpCtParmTable004.tex}
+ \label{ExpCtParmTable004.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable004.tex}  
+% report/ExpCmain055.tex
+% ExpC
+% Table:  Parameters of treatment BoolT1SGPreplayXIX passed to xegaRun
+
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT1SGPreplayXIX passed to xegaRun
+ }
+\input{ExpCtParmTable005.tex}
+ \label{ExpCtParmTable005.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable005.tex}  
+% report/ExpCmain056.tex
+% ExpC
+% Table:  Parameters of treatment BoolT1SGPreplayXIX passed to xegaRun
+
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT1SGPreplayXIX passed to xegaRun
+ }
+\input{ExpCtParmTable006.tex}
+ \label{ExpCtParmTable006.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable006.tex}  
+% report/ExpCmain057.tex
+% ExpC
+% Table:  Parameters of treatment BoolT1SGPreplayXIX passed to xegaRun
+
+% Thu May  1 12:42:26 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT1SGPreplayXIX passed to xegaRun
+ }
+\input{ExpCtParmTable007.tex}
+ \label{ExpCtParmTable007.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable007.tex}  
+% report/ExpCmain058.tex
+% ExpC
+% Table: Treatment: BoolT1SGPreplayXIX
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT1SGPreplayXIX }
+\input{ExpCStatsTable008.tex}
+ \label{ExpCStatsTable008.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCStatsTable008.tex}  
+% report/ExpCmain059.tex
+% ExpC
+% Table: The Solution Table of Treatment BoolT1SGPreplayXIX of Experiment ExpC. Fit: 0. Unique Shortest Solutions: 1.
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT1SGPreplayXIX of Experiment ExpC. Fit: 0. Unique Shortest Solutions: 1. }
+\input{ExpCSolutionTable001.tex}
+ \label{ExpCSolutionTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCSolutionTable001.tex}  
+% report/ExpCmain060.tex
+% ExpC
+% Figure: The Derivation Tree of a Solution of Treatment BoolT1SGPreplayXIX of Experiment ExpC
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT1SGPreplayXIX of Experiment ExpC }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpCDerivationTreeFigure001.pdf}
+ \end{center}
+ \label{report/ExpCDerivationTreeFigure001.pdf}  
+ \end{frame}
+
+% report/ExpCmain061.tex
+% ExpC
+% Figure: Plot of last xegaRun for Treatment BoolT1SGPreplayXIX of Experiment ExpC
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT1SGPreplayXIX of Experiment ExpC }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpCPlotPopStatsFigure001.eps}
+ \end{center}
+ \label{report/ExpCPlotPopStatsFigure001.eps}  
+ \end{frame}
+
+% report/ExpCmain062.tex
+\clearpage
+\subsection{Treatment BoolT1SGPreplayZa}
+% report/ExpCmain063.tex
+% ExpC
+% Table:  Parameters of treatment: BoolT1SGPreplayZa 
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT1SGPreplayZa 
+ }
+\input{ExpCtParmTable008.tex}
+ \label{ExpCtParmTable008.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable008.tex}  
+% report/ExpCmain064.tex
+% ExpC
+% Table:  Parameters of treatment BoolT1SGPreplayZa passed to xegaRun
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT1SGPreplayZa passed to xegaRun
+ }
+\input{ExpCtParmTable009.tex}
+ \label{ExpCtParmTable009.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable009.tex}  
+% report/ExpCmain065.tex
+% ExpC
+% Table:  Parameters of treatment BoolT1SGPreplayZa passed to xegaRun
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT1SGPreplayZa passed to xegaRun
+ }
+\input{ExpCtParmTable010.tex}
+ \label{ExpCtParmTable010.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable010.tex}  
+% report/ExpCmain066.tex
+% ExpC
+% Table:  Parameters of treatment BoolT1SGPreplayZa passed to xegaRun
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT1SGPreplayZa passed to xegaRun
+ }
+\input{ExpCtParmTable011.tex}
+ \label{ExpCtParmTable011.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable011.tex}  
+% report/ExpCmain067.tex
+% ExpC
+% Table: Treatment: BoolT1SGPreplayZa
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT1SGPreplayZa }
+\input{ExpCStatsTable009.tex}
+ \label{ExpCStatsTable009.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCStatsTable009.tex}  
+% report/ExpCmain068.tex
+% ExpC
+% Table: The Solution Table of Treatment BoolT1SGPreplayZa of Experiment ExpC. Fit: 0. Unique Shortest Solutions: 14.
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT1SGPreplayZa of Experiment ExpC. Fit: 0. Unique Shortest Solutions: 14. }
+\input{ExpCSolutionTable002.tex}
+ \label{ExpCSolutionTable002.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCSolutionTable002.tex}  
+% report/ExpCmain069.tex
+% ExpC
+% Figure: The Derivation Tree of a Solution of Treatment BoolT1SGPreplayZa of Experiment ExpC
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT1SGPreplayZa of Experiment ExpC }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpCDerivationTreeFigure002.pdf}
+ \end{center}
+ \label{report/ExpCDerivationTreeFigure002.pdf}  
+ \end{frame}
+
+% report/ExpCmain070.tex
+% ExpC
+% Figure: Plot of last xegaRun for Treatment BoolT1SGPreplayZa of Experiment ExpC
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT1SGPreplayZa of Experiment ExpC }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpCPlotPopStatsFigure002.eps}
+ \end{center}
+ \label{report/ExpCPlotPopStatsFigure002.eps}  
+ \end{frame}
+
+% report/ExpCmain071.tex
+\clearpage
+\subsection{Treatment BoolT1SGPreplayZb}
+% report/ExpCmain072.tex
+% ExpC
+% Table:  Parameters of treatment: BoolT1SGPreplayZb 
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT1SGPreplayZb 
+ }
+\input{ExpCtParmTable012.tex}
+ \label{ExpCtParmTable012.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable012.tex}  
+% report/ExpCmain073.tex
+% ExpC
+% Table:  Parameters of treatment BoolT1SGPreplayZb passed to xegaRun
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT1SGPreplayZb passed to xegaRun
+ }
+\input{ExpCtParmTable013.tex}
+ \label{ExpCtParmTable013.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable013.tex}  
+% report/ExpCmain074.tex
+% ExpC
+% Table:  Parameters of treatment BoolT1SGPreplayZb passed to xegaRun
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT1SGPreplayZb passed to xegaRun
+ }
+\input{ExpCtParmTable014.tex}
+ \label{ExpCtParmTable014.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable014.tex}  
+% report/ExpCmain075.tex
+% ExpC
+% Table:  Parameters of treatment BoolT1SGPreplayZb passed to xegaRun
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT1SGPreplayZb passed to xegaRun
+ }
+\input{ExpCtParmTable015.tex}
+ \label{ExpCtParmTable015.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable015.tex}  
+% report/ExpCmain076.tex
+% ExpC
+% Table: Treatment: BoolT1SGPreplayZb
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT1SGPreplayZb }
+\input{ExpCStatsTable010.tex}
+ \label{ExpCStatsTable010.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCStatsTable010.tex}  
+% report/ExpCmain077.tex
+% ExpC
+% Table: The Solution Table of Treatment BoolT1SGPreplayZb of Experiment ExpC. Fit: 0. Unique Shortest Solutions: 17.
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT1SGPreplayZb of Experiment ExpC. Fit: 0. Unique Shortest Solutions: 17. }
+\input{ExpCSolutionTable003.tex}
+ \label{ExpCSolutionTable003.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCSolutionTable003.tex}  
+% report/ExpCmain078.tex
+% ExpC
+% Figure: The Derivation Tree of a Solution of Treatment BoolT1SGPreplayZb of Experiment ExpC
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT1SGPreplayZb of Experiment ExpC }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpCDerivationTreeFigure003.pdf}
+ \end{center}
+ \label{report/ExpCDerivationTreeFigure003.pdf}  
+ \end{frame}
+
+% report/ExpCmain079.tex
+% ExpC
+% Figure: Plot of last xegaRun for Treatment BoolT1SGPreplayZb of Experiment ExpC
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT1SGPreplayZb of Experiment ExpC }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpCPlotPopStatsFigure003.eps}
+ \end{center}
+ \label{report/ExpCPlotPopStatsFigure003.eps}  
+ \end{frame}
+
+% report/ExpCmain080.tex
+\clearpage
+\section{C xega}
+% report/ExpCmain081.tex
+% ExpC
+% Table:  All parameters of xegaRun of treatment BoolT1SGPreplayXIII 
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment BoolT1SGPreplayXIII 
+ }
+\input{ExpCtParmTable016.tex}
+ \label{ExpCtParmTable016.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable016.tex}  
+% report/ExpCmain082.tex
+% ExpC
+% Table:  All parameters of xegaRun of treatment BoolT1SGPreplayXIII 
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment BoolT1SGPreplayXIII 
+ }
+\input{ExpCtParmTable017.tex}
+ \label{ExpCtParmTable017.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable017.tex}  
+% report/ExpCmain083.tex
+% ExpC
+% Table:  All parameters of xegaRun of treatment BoolT1SGPreplayXIII 
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment BoolT1SGPreplayXIII 
+ }
+\input{ExpCtParmTable018.tex}
+ \label{ExpCtParmTable018.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable018.tex}  
+% report/ExpCmain084.tex
+% ExpC
+% Table:  All parameters of xegaRun of treatment BoolT1SGPreplayXIII 
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment BoolT1SGPreplayXIII 
+ }
+\input{ExpCtParmTable019.tex}
+ \label{ExpCtParmTable019.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable019.tex}  
+% report/ExpCmain085.tex
+% ExpC
+% Table:  All parameters of xegaRun of treatment BoolT1SGPreplayXIII 
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment BoolT1SGPreplayXIII 
+ }
+\input{ExpCtParmTable020.tex}
+ \label{ExpCtParmTable020.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable020.tex}  
+% report/ExpCmain086.tex
+% ExpC
+% Table:  All parameters of xegaRun of treatment BoolT1SGPreplayXIII 
+
+% Thu May  1 12:42:27 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment BoolT1SGPreplayXIII 
+ }
+\input{ExpCtParmTable021.tex}
+ \label{ExpCtParmTable021.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpCtParmTable021.tex}  
+% report/ExpCmain087.tex
+\end{document}

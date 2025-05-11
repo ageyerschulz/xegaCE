@@ -1,0 +1,1449 @@
+% templateReport/ExpFmain000.tex
+\documentclass[18pt,c]{beamer}
+\makeatletter
+\let\beamer@writeslidentry@miniframeson=\beamer@writeslidentry
+\def\beamer@writeslidentry@miniframesoff{%
+  \expandafter\beamer@ifempty\expandafter{\beamer@framestartpage}{}% does not happen normally
+  {%else
+    % removed \addtocontents commands
+   \clearpage\beamer@notesactions%
+  }
+}
+\newcommand*{\miniframeson}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframeson}
+\newcommand*{\miniframesoff}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframesoff}
+\makeatother
+% yellow
+\definecolor{goldenyellow}{rgb}{1.0, 0.87, 0.0}
+\definecolor{electricyellow}{rgb}{1.0, 1.0, 0.0}
+\definecolor{icterine}{rgb}{0.99, 0.97, 0.37}
+\definecolor{flavescent}{rgb}{0.97, 0.91, 0.56}
+\definecolor{lemon}{rgb}{1.0, 0.97, 0.0}
+% orange
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
+\definecolor{internationalorange}{rgb}{1.0, 0.31, 0.0}
+% red
+\definecolor{ferrarired}{rgb}{1.0, 0.11, 0.0}
+\definecolor{fireenginered}{rgb}{0.81, 0.09, 0.13}
+\definecolor{cadmiumred}{rgb}{0.89, 0.0, 0.13}
+% blue
+\definecolor{ao}{rgb}{0.0, 0.5, 0.0}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91}
+\definecolor{blue}{rgb}{0.0, 0.0, 1.0}
+\definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+\definecolor{darkmidnightblue}{rgb}{0.0, 0.2, 0.4}
+\definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
+\definecolor{deepskyblue}{rgb}{0.0, 0.75, 1.0}
+\definecolor{iris}{rgb}{0.35, 0.31, 0.81}
+\definecolor{navyblue}{rgb}{0.0, 0.0, 0.5}
+\definecolor{ultramarine}{rgb}{0.07, 0.04, 0.56}
+\definecolor{electricultramarine}{rgb}{0.25, 0.0, 1.0}
+% green
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
+\usetheme{Berkeley}
+\usecolortheme{default}
+\usefonttheme{default}
+\setbeamercolor{structure}{fg=iris}
+\setbeamerfont{frametitle}{size=\footnotesize}
+\usepackage{graphicx}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\floatpagefraction}{1.0}
+\begin{document}
+\title{Report of Experiment ExpF. k-Symmetry: Scalability of Learning by Grammar Tuning and Language Tuning  }
+\author{Andreas Geyer-Schulz}
+\date{\today}
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}
+\frametitle{Abstract}
+In this experiment we study the complexity of learning  with increasing k with a grammar with symmetric pairs and an additional function.%\end{abstract}
+\end{frame}
+\begin{frame}[t, allowframebreaks]
+\frametitle{Contents}
+\tableofcontents[subsubsectionstyle=hide]
+\vfill
+\end{frame}
+% templateReport/ExpFmain001.tex
+\miniframeson
+\section{Design of Experiment}
+% templateReport/ExpFmain002.tex
+% ExpF
+% Table: Common Parameters of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Common Parameters of Experiment ExpF }
+\input{ExpFCommonTable000.tex}
+ \label{ExpFCommonTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFCommonTable000.tex}  
+% templateReport/ExpFmain003.tex
+% ExpF
+% Table: Common Parameters of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Common Parameters of Experiment ExpF }
+\input{ExpFCommonTable001.tex}
+ \label{ExpFCommonTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFCommonTable001.tex}  
+% templateReport/ExpFmain004.tex
+% ExpF
+% Table: Parameters of Treatments of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Parameters of Treatments of Experiment ExpF }
+\input{ExpFDifferentTable000.tex}
+ \label{ExpFDifferentTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFDifferentTable000.tex}  
+% templateReport/ExpFmain005.tex
+% ExpF
+% Table: The Production Table of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Production Table of Experiment ExpF }
+\input{ExpFGrammarTable000.tex}
+ \label{ExpFGrammarTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFGrammarTable000.tex}  
+% templateReport/ExpFmain006.tex
+\miniframeson
+\section{A Summary}
+% templateReport/ExpFmain007.tex
+% ExpF
+% Table: Summary of statistics of experiment ExpF.
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Summary of statistics of experiment ExpF. }
+\input{ExpFStatsTable000.tex}
+ \label{ExpFStatsTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable000.tex}  
+% templateReport/ExpFmain008.tex
+% ExpF
+% Table: Summary of statistics of experiment ExpF.
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Summary of statistics of experiment ExpF. }
+\input{ExpFStatsTable001.tex}
+ \label{ExpFStatsTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable001.tex}  
+% templateReport/ExpFmain009.tex
+% ExpF
+% Table: Summary of statistics of experiment ExpF.
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Summary of statistics of experiment ExpF. }
+\input{ExpFStatsTable002.tex}
+ \label{ExpFStatsTable002.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable002.tex}  
+% templateReport/ExpFmain010.tex
+\miniframeson
+\section{B Treatments}
+% templateReport/ExpFmain011.tex
+\miniframeson
+\subsection{Treatment BoolT5sgp002k}
+% templateReport/ExpFmain012.tex
+% ExpF
+% Table:  Parameters of treatment: BoolT5sgp002k 
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT5sgp002k 
+ }
+\input{ExpFtParmTable000.tex}
+ \label{ExpFtParmTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable000.tex}  
+% templateReport/ExpFmain013.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp002k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp002k passed to xegaRun
+ }
+\input{ExpFtParmTable001.tex}
+ \label{ExpFtParmTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable001.tex}  
+% templateReport/ExpFmain014.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp002k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp002k passed to xegaRun
+ }
+\input{ExpFtParmTable002.tex}
+ \label{ExpFtParmTable002.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable002.tex}  
+% templateReport/ExpFmain015.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp002k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp002k passed to xegaRun
+ }
+\input{ExpFtParmTable003.tex}
+ \label{ExpFtParmTable003.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable003.tex}  
+% templateReport/ExpFmain016.tex
+% ExpF
+% Table: Treatment: BoolT5sgp002k
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT5sgp002k }
+\input{ExpFStatsTable003.tex}
+ \label{ExpFStatsTable003.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable003.tex}  
+% templateReport/ExpFmain017.tex
+% ExpF
+% Table: The Solution Table of Treatment BoolT5sgp002k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 3.
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT5sgp002k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 3. }
+\input{ExpFSolutionTable000.tex}
+ \label{ExpFSolutionTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFSolutionTable000.tex}  
+% templateReport/ExpFmain018.tex
+% ExpF
+% Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp002k of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp002k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpFDerivationTreeFigure000.pdf}
+ \end{center}
+ \label{templateReport/ExpFDerivationTreeFigure000.pdf}  
+ \end{frame}
+
+% templateReport/ExpFmain019.tex
+% ExpF
+% Figure: Plot of last xegaRun for Treatment BoolT5sgp002k of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp002k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpFPlotPopStatsFigure000.eps}
+ \end{center}
+ \label{templateReport/ExpFPlotPopStatsFigure000.eps}  
+ \end{frame}
+
+% templateReport/ExpFmain020.tex
+\miniframeson
+\subsection{Treatment BoolT5sgp003k}
+% templateReport/ExpFmain021.tex
+% ExpF
+% Table:  Parameters of treatment: BoolT5sgp003k 
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT5sgp003k 
+ }
+\input{ExpFtParmTable004.tex}
+ \label{ExpFtParmTable004.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable004.tex}  
+% templateReport/ExpFmain022.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp003k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp003k passed to xegaRun
+ }
+\input{ExpFtParmTable005.tex}
+ \label{ExpFtParmTable005.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable005.tex}  
+% templateReport/ExpFmain023.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp003k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp003k passed to xegaRun
+ }
+\input{ExpFtParmTable006.tex}
+ \label{ExpFtParmTable006.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable006.tex}  
+% templateReport/ExpFmain024.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp003k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp003k passed to xegaRun
+ }
+\input{ExpFtParmTable007.tex}
+ \label{ExpFtParmTable007.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable007.tex}  
+% templateReport/ExpFmain025.tex
+% ExpF
+% Table: Treatment: BoolT5sgp003k
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT5sgp003k }
+\input{ExpFStatsTable004.tex}
+ \label{ExpFStatsTable004.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable004.tex}  
+% templateReport/ExpFmain026.tex
+% ExpF
+% Table: The Solution Table of Treatment BoolT5sgp003k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 5.
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT5sgp003k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 5. }
+\input{ExpFSolutionTable001.tex}
+ \label{ExpFSolutionTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFSolutionTable001.tex}  
+% templateReport/ExpFmain027.tex
+% ExpF
+% Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp003k of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp003k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpFDerivationTreeFigure001.pdf}
+ \end{center}
+ \label{templateReport/ExpFDerivationTreeFigure001.pdf}  
+ \end{frame}
+
+% templateReport/ExpFmain028.tex
+% ExpF
+% Figure: Plot of last xegaRun for Treatment BoolT5sgp003k of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp003k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpFPlotPopStatsFigure001.eps}
+ \end{center}
+ \label{templateReport/ExpFPlotPopStatsFigure001.eps}  
+ \end{frame}
+
+% templateReport/ExpFmain029.tex
+\miniframeson
+\subsection{Treatment BoolT5sgp004k}
+% templateReport/ExpFmain030.tex
+% ExpF
+% Table:  Parameters of treatment: BoolT5sgp004k 
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT5sgp004k 
+ }
+\input{ExpFtParmTable008.tex}
+ \label{ExpFtParmTable008.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable008.tex}  
+% templateReport/ExpFmain031.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp004k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp004k passed to xegaRun
+ }
+\input{ExpFtParmTable009.tex}
+ \label{ExpFtParmTable009.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable009.tex}  
+% templateReport/ExpFmain032.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp004k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp004k passed to xegaRun
+ }
+\input{ExpFtParmTable010.tex}
+ \label{ExpFtParmTable010.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable010.tex}  
+% templateReport/ExpFmain033.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp004k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp004k passed to xegaRun
+ }
+\input{ExpFtParmTable011.tex}
+ \label{ExpFtParmTable011.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable011.tex}  
+% templateReport/ExpFmain034.tex
+% ExpF
+% Table: Treatment: BoolT5sgp004k
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT5sgp004k }
+\input{ExpFStatsTable005.tex}
+ \label{ExpFStatsTable005.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable005.tex}  
+% templateReport/ExpFmain035.tex
+% ExpF
+% Table: The Solution Table of Treatment BoolT5sgp004k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 8.
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT5sgp004k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 8. }
+\input{ExpFSolutionTable002.tex}
+ \label{ExpFSolutionTable002.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFSolutionTable002.tex}  
+% templateReport/ExpFmain036.tex
+% ExpF
+% Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp004k of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp004k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpFDerivationTreeFigure002.pdf}
+ \end{center}
+ \label{templateReport/ExpFDerivationTreeFigure002.pdf}  
+ \end{frame}
+
+% templateReport/ExpFmain037.tex
+% ExpF
+% Figure: Plot of last xegaRun for Treatment BoolT5sgp004k of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp004k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpFPlotPopStatsFigure002.eps}
+ \end{center}
+ \label{templateReport/ExpFPlotPopStatsFigure002.eps}  
+ \end{frame}
+
+% templateReport/ExpFmain038.tex
+\miniframeson
+\subsection{Treatment BoolT5sgp005k}
+% templateReport/ExpFmain039.tex
+% ExpF
+% Table:  Parameters of treatment: BoolT5sgp005k 
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT5sgp005k 
+ }
+\input{ExpFtParmTable012.tex}
+ \label{ExpFtParmTable012.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable012.tex}  
+% templateReport/ExpFmain040.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp005k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp005k passed to xegaRun
+ }
+\input{ExpFtParmTable013.tex}
+ \label{ExpFtParmTable013.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable013.tex}  
+% templateReport/ExpFmain041.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp005k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp005k passed to xegaRun
+ }
+\input{ExpFtParmTable014.tex}
+ \label{ExpFtParmTable014.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable014.tex}  
+% templateReport/ExpFmain042.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp005k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp005k passed to xegaRun
+ }
+\input{ExpFtParmTable015.tex}
+ \label{ExpFtParmTable015.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable015.tex}  
+% templateReport/ExpFmain043.tex
+% ExpF
+% Table: Treatment: BoolT5sgp005k
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT5sgp005k }
+\input{ExpFStatsTable006.tex}
+ \label{ExpFStatsTable006.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable006.tex}  
+% templateReport/ExpFmain044.tex
+% ExpF
+% Table: The Solution Table of Treatment BoolT5sgp005k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 7.
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT5sgp005k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 7. }
+\input{ExpFSolutionTable003.tex}
+ \label{ExpFSolutionTable003.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFSolutionTable003.tex}  
+% templateReport/ExpFmain045.tex
+% ExpF
+% Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp005k of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp005k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpFDerivationTreeFigure003.pdf}
+ \end{center}
+ \label{templateReport/ExpFDerivationTreeFigure003.pdf}  
+ \end{frame}
+
+% templateReport/ExpFmain046.tex
+% ExpF
+% Figure: Plot of last xegaRun for Treatment BoolT5sgp005k of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp005k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpFPlotPopStatsFigure003.eps}
+ \end{center}
+ \label{templateReport/ExpFPlotPopStatsFigure003.eps}  
+ \end{frame}
+
+% templateReport/ExpFmain047.tex
+\miniframeson
+\subsection{Treatment BoolT5sgp006k}
+% templateReport/ExpFmain048.tex
+% ExpF
+% Table:  Parameters of treatment: BoolT5sgp006k 
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT5sgp006k 
+ }
+\input{ExpFtParmTable016.tex}
+ \label{ExpFtParmTable016.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable016.tex}  
+% templateReport/ExpFmain049.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp006k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp006k passed to xegaRun
+ }
+\input{ExpFtParmTable017.tex}
+ \label{ExpFtParmTable017.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable017.tex}  
+% templateReport/ExpFmain050.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp006k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp006k passed to xegaRun
+ }
+\input{ExpFtParmTable018.tex}
+ \label{ExpFtParmTable018.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable018.tex}  
+% templateReport/ExpFmain051.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp006k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp006k passed to xegaRun
+ }
+\input{ExpFtParmTable019.tex}
+ \label{ExpFtParmTable019.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable019.tex}  
+% templateReport/ExpFmain052.tex
+% ExpF
+% Table: Treatment: BoolT5sgp006k
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT5sgp006k }
+\input{ExpFStatsTable007.tex}
+ \label{ExpFStatsTable007.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable007.tex}  
+% templateReport/ExpFmain053.tex
+% ExpF
+% Table: The Solution Table of Treatment BoolT5sgp006k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 10.
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT5sgp006k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 10. }
+\input{ExpFSolutionTable004.tex}
+ \label{ExpFSolutionTable004.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFSolutionTable004.tex}  
+% templateReport/ExpFmain054.tex
+% ExpF
+% Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp006k of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp006k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpFDerivationTreeFigure004.pdf}
+ \end{center}
+ \label{templateReport/ExpFDerivationTreeFigure004.pdf}  
+ \end{frame}
+
+% templateReport/ExpFmain055.tex
+% ExpF
+% Figure: Plot of last xegaRun for Treatment BoolT5sgp006k of Experiment ExpF
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp006k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpFPlotPopStatsFigure004.eps}
+ \end{center}
+ \label{templateReport/ExpFPlotPopStatsFigure004.eps}  
+ \end{frame}
+
+% templateReport/ExpFmain056.tex
+\miniframeson
+\subsection{Treatment BoolT5sgp007k}
+% templateReport/ExpFmain057.tex
+% ExpF
+% Table:  Parameters of treatment: BoolT5sgp007k 
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT5sgp007k 
+ }
+\input{ExpFtParmTable020.tex}
+ \label{ExpFtParmTable020.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable020.tex}  
+% templateReport/ExpFmain058.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp007k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp007k passed to xegaRun
+ }
+\input{ExpFtParmTable021.tex}
+ \label{ExpFtParmTable021.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable021.tex}  
+% templateReport/ExpFmain059.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp007k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp007k passed to xegaRun
+ }
+\input{ExpFtParmTable022.tex}
+ \label{ExpFtParmTable022.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable022.tex}  
+% templateReport/ExpFmain060.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp007k passed to xegaRun
+
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp007k passed to xegaRun
+ }
+\input{ExpFtParmTable023.tex}
+ \label{ExpFtParmTable023.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable023.tex}  
+% templateReport/ExpFmain061.tex
+% ExpF
+% Table: Treatment: BoolT5sgp007k
+% Thu May  8 20:52:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT5sgp007k }
+\input{ExpFStatsTable008.tex}
+ \label{ExpFStatsTable008.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable008.tex}  
+% templateReport/ExpFmain062.tex
+% ExpF
+% Table: The Solution Table of Treatment BoolT5sgp007k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 10.
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT5sgp007k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 10. }
+\input{ExpFSolutionTable005.tex}
+ \label{ExpFSolutionTable005.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFSolutionTable005.tex}  
+% templateReport/ExpFmain063.tex
+% ExpF
+% Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp007k of Experiment ExpF
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp007k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpFDerivationTreeFigure005.pdf}
+ \end{center}
+ \label{templateReport/ExpFDerivationTreeFigure005.pdf}  
+ \end{frame}
+
+% templateReport/ExpFmain064.tex
+% ExpF
+% Figure: Plot of last xegaRun for Treatment BoolT5sgp007k of Experiment ExpF
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp007k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpFPlotPopStatsFigure005.eps}
+ \end{center}
+ \label{templateReport/ExpFPlotPopStatsFigure005.eps}  
+ \end{frame}
+
+% templateReport/ExpFmain065.tex
+\miniframeson
+\subsection{Treatment BoolT5sgp008k}
+% templateReport/ExpFmain066.tex
+% ExpF
+% Table:  Parameters of treatment: BoolT5sgp008k 
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT5sgp008k 
+ }
+\input{ExpFtParmTable024.tex}
+ \label{ExpFtParmTable024.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable024.tex}  
+% templateReport/ExpFmain067.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp008k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp008k passed to xegaRun
+ }
+\input{ExpFtParmTable025.tex}
+ \label{ExpFtParmTable025.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable025.tex}  
+% templateReport/ExpFmain068.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp008k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp008k passed to xegaRun
+ }
+\input{ExpFtParmTable026.tex}
+ \label{ExpFtParmTable026.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable026.tex}  
+% templateReport/ExpFmain069.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp008k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp008k passed to xegaRun
+ }
+\input{ExpFtParmTable027.tex}
+ \label{ExpFtParmTable027.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable027.tex}  
+% templateReport/ExpFmain070.tex
+% ExpF
+% Table: Treatment: BoolT5sgp008k
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT5sgp008k }
+\input{ExpFStatsTable009.tex}
+ \label{ExpFStatsTable009.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable009.tex}  
+% templateReport/ExpFmain071.tex
+% ExpF
+% Table: The Solution Table of Treatment BoolT5sgp008k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 10.
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT5sgp008k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 10. }
+\input{ExpFSolutionTable006.tex}
+ \label{ExpFSolutionTable006.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFSolutionTable006.tex}  
+% templateReport/ExpFmain072.tex
+% ExpF
+% Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp008k of Experiment ExpF
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp008k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpFDerivationTreeFigure006.pdf}
+ \end{center}
+ \label{templateReport/ExpFDerivationTreeFigure006.pdf}  
+ \end{frame}
+
+% templateReport/ExpFmain073.tex
+% ExpF
+% Figure: Plot of last xegaRun for Treatment BoolT5sgp008k of Experiment ExpF
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp008k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpFPlotPopStatsFigure006.eps}
+ \end{center}
+ \label{templateReport/ExpFPlotPopStatsFigure006.eps}  
+ \end{frame}
+
+% templateReport/ExpFmain074.tex
+\miniframeson
+\subsection{Treatment BoolT5sgp009k}
+% templateReport/ExpFmain075.tex
+% ExpF
+% Table:  Parameters of treatment: BoolT5sgp009k 
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT5sgp009k 
+ }
+\input{ExpFtParmTable028.tex}
+ \label{ExpFtParmTable028.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable028.tex}  
+% templateReport/ExpFmain076.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp009k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp009k passed to xegaRun
+ }
+\input{ExpFtParmTable029.tex}
+ \label{ExpFtParmTable029.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable029.tex}  
+% templateReport/ExpFmain077.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp009k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp009k passed to xegaRun
+ }
+\input{ExpFtParmTable030.tex}
+ \label{ExpFtParmTable030.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable030.tex}  
+% templateReport/ExpFmain078.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp009k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp009k passed to xegaRun
+ }
+\input{ExpFtParmTable031.tex}
+ \label{ExpFtParmTable031.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable031.tex}  
+% templateReport/ExpFmain079.tex
+% ExpF
+% Table: Treatment: BoolT5sgp009k
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT5sgp009k }
+\input{ExpFStatsTable010.tex}
+ \label{ExpFStatsTable010.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable010.tex}  
+% templateReport/ExpFmain080.tex
+% ExpF
+% Table: The Solution Table of Treatment BoolT5sgp009k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 10.
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT5sgp009k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 10. }
+\input{ExpFSolutionTable007.tex}
+ \label{ExpFSolutionTable007.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFSolutionTable007.tex}  
+% templateReport/ExpFmain081.tex
+% ExpF
+% Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp009k of Experiment ExpF
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp009k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpFDerivationTreeFigure007.pdf}
+ \end{center}
+ \label{templateReport/ExpFDerivationTreeFigure007.pdf}  
+ \end{frame}
+
+% templateReport/ExpFmain082.tex
+% ExpF
+% Figure: Plot of last xegaRun for Treatment BoolT5sgp009k of Experiment ExpF
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp009k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpFPlotPopStatsFigure007.eps}
+ \end{center}
+ \label{templateReport/ExpFPlotPopStatsFigure007.eps}  
+ \end{frame}
+
+% templateReport/ExpFmain083.tex
+\miniframeson
+\subsection{Treatment BoolT5sgp010k}
+% templateReport/ExpFmain084.tex
+% ExpF
+% Table:  Parameters of treatment: BoolT5sgp010k 
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT5sgp010k 
+ }
+\input{ExpFtParmTable032.tex}
+ \label{ExpFtParmTable032.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable032.tex}  
+% templateReport/ExpFmain085.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp010k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp010k passed to xegaRun
+ }
+\input{ExpFtParmTable033.tex}
+ \label{ExpFtParmTable033.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable033.tex}  
+% templateReport/ExpFmain086.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp010k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp010k passed to xegaRun
+ }
+\input{ExpFtParmTable034.tex}
+ \label{ExpFtParmTable034.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable034.tex}  
+% templateReport/ExpFmain087.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp010k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp010k passed to xegaRun
+ }
+\input{ExpFtParmTable035.tex}
+ \label{ExpFtParmTable035.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable035.tex}  
+% templateReport/ExpFmain088.tex
+% ExpF
+% Table: Treatment: BoolT5sgp010k
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT5sgp010k }
+\input{ExpFStatsTable011.tex}
+ \label{ExpFStatsTable011.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable011.tex}  
+% templateReport/ExpFmain089.tex
+% ExpF
+% Table: The Solution Table of Treatment BoolT5sgp010k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 10.
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT5sgp010k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 10. }
+\input{ExpFSolutionTable008.tex}
+ \label{ExpFSolutionTable008.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFSolutionTable008.tex}  
+% templateReport/ExpFmain090.tex
+% ExpF
+% Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp010k of Experiment ExpF
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp010k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpFDerivationTreeFigure008.pdf}
+ \end{center}
+ \label{templateReport/ExpFDerivationTreeFigure008.pdf}  
+ \end{frame}
+
+% templateReport/ExpFmain091.tex
+% ExpF
+% Figure: Plot of last xegaRun for Treatment BoolT5sgp010k of Experiment ExpF
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp010k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpFPlotPopStatsFigure008.eps}
+ \end{center}
+ \label{templateReport/ExpFPlotPopStatsFigure008.eps}  
+ \end{frame}
+
+% templateReport/ExpFmain092.tex
+\miniframeson
+\subsection{Treatment BoolT5sgp011k}
+% templateReport/ExpFmain093.tex
+% ExpF
+% Table:  Parameters of treatment: BoolT5sgp011k 
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT5sgp011k 
+ }
+\input{ExpFtParmTable036.tex}
+ \label{ExpFtParmTable036.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable036.tex}  
+% templateReport/ExpFmain094.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp011k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp011k passed to xegaRun
+ }
+\input{ExpFtParmTable037.tex}
+ \label{ExpFtParmTable037.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable037.tex}  
+% templateReport/ExpFmain095.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp011k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp011k passed to xegaRun
+ }
+\input{ExpFtParmTable038.tex}
+ \label{ExpFtParmTable038.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable038.tex}  
+% templateReport/ExpFmain096.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp011k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp011k passed to xegaRun
+ }
+\input{ExpFtParmTable039.tex}
+ \label{ExpFtParmTable039.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable039.tex}  
+% templateReport/ExpFmain097.tex
+% ExpF
+% Table: Treatment: BoolT5sgp011k
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT5sgp011k }
+\input{ExpFStatsTable012.tex}
+ \label{ExpFStatsTable012.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable012.tex}  
+% templateReport/ExpFmain098.tex
+% ExpF
+% Table: The Solution Table of Treatment BoolT5sgp011k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 9.
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT5sgp011k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 9. }
+\input{ExpFSolutionTable009.tex}
+ \label{ExpFSolutionTable009.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFSolutionTable009.tex}  
+% templateReport/ExpFmain099.tex
+% ExpF
+% Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp011k of Experiment ExpF
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp011k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpFDerivationTreeFigure009.pdf}
+ \end{center}
+ \label{templateReport/ExpFDerivationTreeFigure009.pdf}  
+ \end{frame}
+
+% templateReport/ExpFmain100.tex
+% ExpF
+% Figure: Plot of last xegaRun for Treatment BoolT5sgp011k of Experiment ExpF
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp011k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpFPlotPopStatsFigure009.eps}
+ \end{center}
+ \label{templateReport/ExpFPlotPopStatsFigure009.eps}  
+ \end{frame}
+
+% templateReport/ExpFmain101.tex
+\miniframeson
+\subsection{Treatment BoolT5sgp012k}
+% templateReport/ExpFmain102.tex
+% ExpF
+% Table:  Parameters of treatment: BoolT5sgp012k 
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: BoolT5sgp012k 
+ }
+\input{ExpFtParmTable040.tex}
+ \label{ExpFtParmTable040.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable040.tex}  
+% templateReport/ExpFmain103.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp012k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp012k passed to xegaRun
+ }
+\input{ExpFtParmTable041.tex}
+ \label{ExpFtParmTable041.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable041.tex}  
+% templateReport/ExpFmain104.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp012k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp012k passed to xegaRun
+ }
+\input{ExpFtParmTable042.tex}
+ \label{ExpFtParmTable042.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable042.tex}  
+% templateReport/ExpFmain105.tex
+% ExpF
+% Table:  Parameters of treatment BoolT5sgp012k passed to xegaRun
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment BoolT5sgp012k passed to xegaRun
+ }
+\input{ExpFtParmTable043.tex}
+ \label{ExpFtParmTable043.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable043.tex}  
+% templateReport/ExpFmain106.tex
+% ExpF
+% Table: Treatment: BoolT5sgp012k
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: BoolT5sgp012k }
+\input{ExpFStatsTable013.tex}
+ \label{ExpFStatsTable013.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFStatsTable013.tex}  
+% templateReport/ExpFmain107.tex
+% ExpF
+% Table: The Solution Table of Treatment BoolT5sgp012k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 10.
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ The Solution Table of Treatment BoolT5sgp012k of Experiment ExpF. Fit: 0. Unique Shortest Solutions: 10. }
+\input{ExpFSolutionTable010.tex}
+ \label{ExpFSolutionTable010.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFSolutionTable010.tex}  
+% templateReport/ExpFmain108.tex
+% ExpF
+% Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp012k of Experiment ExpF
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp012k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=0]
+{ExpFDerivationTreeFigure010.pdf}
+ \end{center}
+ \label{templateReport/ExpFDerivationTreeFigure010.pdf}  
+ \end{frame}
+
+% templateReport/ExpFmain109.tex
+% ExpF
+% Figure: Plot of last xegaRun for Treatment BoolT5sgp012k of Experiment ExpF
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp012k of Experiment ExpF }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpFPlotPopStatsFigure010.eps}
+ \end{center}
+ \label{templateReport/ExpFPlotPopStatsFigure010.eps}  
+ \end{frame}
+
+% templateReport/ExpFmain110.tex
+\miniframeson
+\section{C xega}
+% templateReport/ExpFmain111.tex
+% ExpF
+% Table:  All parameters of xegaRun of treatment BoolT5sgp002k 
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment BoolT5sgp002k 
+ }
+\input{ExpFtParmTable044.tex}
+ \label{ExpFtParmTable044.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable044.tex}  
+% templateReport/ExpFmain112.tex
+% ExpF
+% Table:  All parameters of xegaRun of treatment BoolT5sgp002k 
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment BoolT5sgp002k 
+ }
+\input{ExpFtParmTable045.tex}
+ \label{ExpFtParmTable045.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable045.tex}  
+% templateReport/ExpFmain113.tex
+% ExpF
+% Table:  All parameters of xegaRun of treatment BoolT5sgp002k 
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment BoolT5sgp002k 
+ }
+\input{ExpFtParmTable046.tex}
+ \label{ExpFtParmTable046.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable046.tex}  
+% templateReport/ExpFmain114.tex
+% ExpF
+% Table:  All parameters of xegaRun of treatment BoolT5sgp002k 
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment BoolT5sgp002k 
+ }
+\input{ExpFtParmTable047.tex}
+ \label{ExpFtParmTable047.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable047.tex}  
+% templateReport/ExpFmain115.tex
+% ExpF
+% Table:  All parameters of xegaRun of treatment BoolT5sgp002k 
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment BoolT5sgp002k 
+ }
+\input{ExpFtParmTable048.tex}
+ \label{ExpFtParmTable048.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable048.tex}  
+% templateReport/ExpFmain116.tex
+% ExpF
+% Table:  All parameters of xegaRun of treatment BoolT5sgp002k 
+
+% Thu May  8 20:52:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment BoolT5sgp002k 
+ }
+\input{ExpFtParmTable049.tex}
+ \label{ExpFtParmTable049.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpFtParmTable049.tex}  
+% templateReport/ExpFmain117.tex
+\end{document}

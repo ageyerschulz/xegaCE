@@ -1,0 +1,24 @@
+\begin{frame}
+\frametitle{
+Growth of Complexity?
+}
+TODO \begin{itemize}
+\item Complexity grows in steps of 2 of k.
+       The 2- and 3-symmetry problem need the same boolean expression,
+       but with different variables:
+       For the 2-symmetry problem, D1 and D2.
+       For the 3-symmetry problem, D1 and D3,
+       D2 is ignored.
+\item Grammar T5 scales well with problem size growth.
+ 
+  {\bf Reason:} The combination of {\bf grammar} and
+        {\bf language} tuning.
+ 
+The generation of pairs of symbols
+                 (grammar tuning) \\
+  and the new function sPair. It takes a 
+  symbol pair as its arguments eliminates the need to expand a 
+  a non-terminal twice with the same symbol pair
+  (language tuning).
+\end{itemize}
+\end{frame}

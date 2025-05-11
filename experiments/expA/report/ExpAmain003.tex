@@ -1,0 +1,24 @@
+\begin{frame}
+\vspace*{2mm}
+\begin{block}{
+Description of Experiment
+}
+The purpose of this computational experiment is
+to compare sequential ({\tt executionModel="Sequential"})
+and multicore ({\tt executionModel="MultiCore"}) processing
+for each algorithm,
+and to establish a performance ranking of the three algorithms
+grammar-based genetic programming ({\tt algorithm="sgp"}),
+grammatical evolution ({\tt algorithm="sge"}), and
+grammatical evolution by differential evolution ({\tt algorithm="sgede"}).
+ 
+The {\bf problem environment} is the 3-symmetry problem:
+Finding a boolean expression (with the nand function)
+which is TRUE for symmetric 3-bit strings.
+ 
+The {\bf solver} used is {\tt xegaRun} from the R-package {\tt xega}.
+ 
+The experiment consists of 6 treatments, namely the sequential and
+multicore version of each of the 3 algorithms.
+\end{block}
+\end{frame}

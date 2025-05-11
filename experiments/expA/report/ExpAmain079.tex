@@ -1,0 +1,24 @@
+\begin{frame}
+\frametitle{
+Which algorithm? (Multi-core)
+}
+\scriptsize 
+The tests establish the following order of grammar-based genetic programming (SGP), 
+grammatical evolution (SGE), and grammatical evolution by differential evolution (SGV):
+ 
+\begin{displaymath}
+\mbox{SGP} < \mbox{SGE} < \mbox{SGV} \quad\quad \mbox{Seconds}
+\end{displaymath}
+\begin{displaymath}
+\mbox{SGP} < \mbox{SGV} < \mbox{SGE} \quad\quad \mbox{Generations}
+\end{displaymath}
+The multi-core and the sequential setting result in the same orders of the algorithms.
+ 
+\vspace{2mm} 
+\begin{itemize}
+\item {\bf Recommendation:} Use grammar-based genetic programming.
+\item {\bf Follow-Up:} Investigate the order reversal between SGV and SGE.
+ {\bf Conjecture:} Grammatical evolution by differential evolution (SGV) scales better than SGE.
+ Investigate the parallelization strategy.
+\end{itemize}
+\end{frame}

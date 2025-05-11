@@ -1,0 +1,15 @@
+\beamer@sectionintoc {1}{Design of Experiment}{4}{0}{1}
+\beamer@sectionintoc {2}{A Summary}{8}{0}{2}
+\beamer@sectionintoc {3}{B Treatments}{11}{0}{3}
+\beamer@subsectionintoc {3}{1}{Treatment BoolT5sgp002k}{11}{0}{3}
+\beamer@subsectionintoc {3}{2}{Treatment BoolT5sgp003k}{19}{0}{3}
+\beamer@subsectionintoc {3}{3}{Treatment BoolT5sgp004k}{27}{0}{3}
+\beamer@subsectionintoc {3}{4}{Treatment BoolT5sgp005k}{35}{0}{3}
+\beamer@subsectionintoc {3}{5}{Treatment BoolT5sgp006k}{43}{0}{3}
+\beamer@subsectionintoc {3}{6}{Treatment BoolT5sgp007k}{51}{0}{3}
+\beamer@subsectionintoc {3}{7}{Treatment BoolT5sgp008k}{59}{0}{3}
+\beamer@subsectionintoc {3}{8}{Treatment BoolT5sgp009k}{67}{0}{3}
+\beamer@subsectionintoc {3}{9}{Treatment BoolT5sgp010k}{75}{0}{3}
+\beamer@subsectionintoc {3}{10}{Treatment BoolT5sgp011k}{83}{0}{3}
+\beamer@subsectionintoc {3}{11}{Treatment BoolT5sgp012k}{91}{0}{3}
+\beamer@sectionintoc {4}{C xega}{99}{0}{4}

@@ -1,0 +1,7 @@
+S := <fe>;
+<fe> := <f0> | 
+        <f2> "(" <fe> "," <fe> ")";
+<f0> := //R// variableNamesLHS("D", k=k) //R// ;
+<f2> := "NAND";
+ //R// nandpairs("<fe>", "D", k=k) //R// 
+

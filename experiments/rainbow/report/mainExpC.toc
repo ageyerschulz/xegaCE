@@ -1,0 +1,15 @@
+\beamer@sectionintoc {1}{Design of Experiment}{5}{0}{1}
+\beamer@sectionintoc {2}{Exploratory Analysis}{12}{0}{2}
+\beamer@subsectionintoc {2}{1}{Do we {\bf always} solve the 3 symmetry problem?}{12}{0}{2}
+\beamer@subsectionintoc {2}{2}{Time of Treatments in Seconds}{14}{0}{2}
+\beamer@subsectionintoc {2}{3}{Number of Generations of Treatments}{18}{0}{2}
+\beamer@sectionintoc {3}{Testing of Effects}{22}{0}{3}
+\beamer@subsectionintoc {3}{1}{Exact Replicability}{22}{0}{3}
+\beamer@subsectionintoc {3}{2}{Stochastic Replicability}{24}{0}{3}
+\beamer@sectionintoc {4}{A Summary}{36}{0}{4}
+\beamer@sectionintoc {5}{B Treatments}{38}{0}{5}
+\beamer@subsectionintoc {5}{1}{Treatment BoolT1SGPreplayXIII}{38}{0}{5}
+\beamer@subsectionintoc {5}{2}{Treatment BoolT1SGPreplayXIX}{46}{0}{5}
+\beamer@subsectionintoc {5}{3}{Treatment BoolT1SGPreplayZa}{54}{0}{5}
+\beamer@subsectionintoc {5}{4}{Treatment BoolT1SGPreplayZb}{62}{0}{5}
+\beamer@sectionintoc {6}{C xega}{70}{0}{6}

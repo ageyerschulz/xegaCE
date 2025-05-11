@@ -1,0 +1,16 @@
+\beamer@sectionintoc {1}{Design of Experiment}{5}{0}{1}
+\beamer@sectionintoc {2}{Analysis of Experiment}{10}{0}{2}
+\beamer@subsectionintoc {2}{1}{How long to find an optimal solution?}{10}{0}{2}
+\beamer@sectionintoc {3}{A Summary}{19}{0}{3}
+\beamer@sectionintoc {4}{B Treatments}{22}{0}{4}
+\beamer@subsectionintoc {4}{1}{Treatment NNtop1sga2k}{22}{0}{4}
+\beamer@subsectionintoc {4}{2}{Treatment NNtop1sga3k}{32}{0}{4}
+\beamer@subsectionintoc {4}{3}{Treatment NNtop1sga4k}{42}{0}{4}
+\beamer@subsectionintoc {4}{4}{Treatment NNtop1sga5k}{53}{0}{4}
+\beamer@subsectionintoc {4}{5}{Treatment NNtop1sga6k}{65}{0}{4}
+\beamer@subsectionintoc {4}{6}{Treatment NNtop1sgde2k}{79}{0}{4}
+\beamer@subsectionintoc {4}{7}{Treatment NNtop1sgde3k}{89}{0}{4}
+\beamer@subsectionintoc {4}{8}{Treatment NNtop1sgde4k}{99}{0}{4}
+\beamer@subsectionintoc {4}{9}{Treatment NNtop1sgde5k}{110}{0}{4}
+\beamer@subsectionintoc {4}{10}{Treatment NNtop1sgde6k}{122}{0}{4}
+\beamer@sectionintoc {5}{C xega}{136}{0}{5}

@@ -1,0 +1,18 @@
+\beamer@sectionintoc {1}{Design of Experiment}{5}{0}{1}
+\beamer@sectionintoc {2}{Exploratory Analysis}{12}{0}{2}
+\beamer@subsectionintoc {2}{1}{Do we always find an optimal solution?}{12}{0}{2}
+\beamer@subsectionintoc {2}{2}{How long to find an optimal solution?}{15}{0}{2}
+\beamer@subsectionintoc {2}{3}{Computational Complexity?}{23}{0}{2}
+\beamer@sectionintoc {3}{A Summary}{27}{0}{3}
+\beamer@sectionintoc {4}{B Treatments}{30}{0}{4}
+\beamer@subsectionintoc {4}{1}{Treatment BoolT4sgp2k}{30}{0}{4}
+\beamer@subsectionintoc {4}{2}{Treatment BoolT4sgp3k}{39}{0}{4}
+\beamer@subsectionintoc {4}{3}{Treatment BoolT4sgp4k}{48}{0}{4}
+\beamer@subsectionintoc {4}{4}{Treatment BoolT4sgp5k}{58}{0}{4}
+\beamer@subsectionintoc {4}{5}{Treatment BoolT4sgp6k}{68}{0}{4}
+\beamer@subsectionintoc {4}{6}{Treatment BoolT5sgp2k}{78}{0}{4}
+\beamer@subsectionintoc {4}{7}{Treatment BoolT5sgp3k}{87}{0}{4}
+\beamer@subsectionintoc {4}{8}{Treatment BoolT5sgp4k}{96}{0}{4}
+\beamer@subsectionintoc {4}{9}{Treatment BoolT5sgp5k}{105}{0}{4}
+\beamer@subsectionintoc {4}{10}{Treatment BoolT5sgp6k}{115}{0}{4}
+\beamer@sectionintoc {5}{C xega}{125}{0}{5}

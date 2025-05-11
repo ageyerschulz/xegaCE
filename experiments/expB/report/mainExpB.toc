@@ -1,0 +1,33 @@
+\beamer@sectionintoc {1}{Design of Experiment}{10}{0}{1}
+\beamer@sectionintoc {2}{Exploratory Analysis}{14}{0}{2}
+\beamer@subsectionintoc {2}{1}{Do we always find an optimal solution?}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{How long to find an optimal solution?}{17}{0}{2}
+\beamer@subsectionintoc {2}{3}{Computational Complexity?}{25}{0}{2}
+\beamer@sectionintoc {3}{A Summary}{31}{0}{3}
+\beamer@sectionintoc {4}{B Treatments}{38}{0}{4}
+\beamer@subsectionintoc {4}{1}{Treatment BoolT0sgp2k}{38}{0}{4}
+\beamer@subsectionintoc {4}{2}{Treatment BoolT0sgp3k}{47}{0}{4}
+\beamer@subsectionintoc {4}{3}{Treatment BoolT0sgp4k}{56}{0}{4}
+\beamer@subsectionintoc {4}{4}{Treatment BoolT0sgp5k}{65}{0}{4}
+\beamer@subsectionintoc {4}{5}{Treatment BoolT0sgp6k}{74}{0}{4}
+\beamer@subsectionintoc {4}{6}{Treatment BoolT1sgp2k}{83}{0}{4}
+\beamer@subsectionintoc {4}{7}{Treatment BoolT1sgp3k}{92}{0}{4}
+\beamer@subsectionintoc {4}{8}{Treatment BoolT1sgp4k}{101}{0}{4}
+\beamer@subsectionintoc {4}{9}{Treatment BoolT1sgp5k}{110}{0}{4}
+\beamer@subsectionintoc {4}{10}{Treatment BoolT1sgp6k}{119}{0}{4}
+\beamer@subsectionintoc {4}{11}{Treatment BoolT2sgp2k}{128}{0}{4}
+\beamer@subsectionintoc {4}{12}{Treatment BoolT2sgp3k}{137}{0}{4}
+\beamer@subsectionintoc {4}{13}{Treatment BoolT2sgp4k}{146}{0}{4}
+\beamer@subsectionintoc {4}{14}{Treatment BoolT2sgp5k}{156}{0}{4}
+\beamer@subsectionintoc {4}{15}{Treatment BoolT2sgp6k}{166}{0}{4}
+\beamer@subsectionintoc {4}{16}{Treatment BoolT3sgp2k}{176}{0}{4}
+\beamer@subsectionintoc {4}{17}{Treatment BoolT3sgp3k}{185}{0}{4}
+\beamer@subsectionintoc {4}{18}{Treatment BoolT3sgp4k}{194}{0}{4}
+\beamer@subsectionintoc {4}{19}{Treatment BoolT3sgp5k}{204}{0}{4}
+\beamer@subsectionintoc {4}{20}{Treatment BoolT3sgp6k}{214}{0}{4}
+\beamer@subsectionintoc {4}{21}{Treatment BoolT4sgp2k}{224}{0}{4}
+\beamer@subsectionintoc {4}{22}{Treatment BoolT4sgp3k}{233}{0}{4}
+\beamer@subsectionintoc {4}{23}{Treatment BoolT4sgp4k}{242}{0}{4}
+\beamer@subsectionintoc {4}{24}{Treatment BoolT4sgp5k}{252}{0}{4}
+\beamer@subsectionintoc {4}{25}{Treatment BoolT4sgp6k}{262}{0}{4}
+\beamer@sectionintoc {5}{C xega}{272}{0}{5}

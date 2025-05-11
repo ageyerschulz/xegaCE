@@ -1,0 +1,1925 @@
+% report/ExpDmain000.tex
+\documentclass[18pt,c]{beamer}
+\makeatletter
+\let\beamer@writeslidentry@miniframeson=\beamer@writeslidentry
+\def\beamer@writeslidentry@miniframesoff{%
+  \expandafter\beamer@ifempty\expandafter{\beamer@framestartpage}{}% does not happen normally
+  {%else
+    % removed \addtocontents commands
+   \clearpage\beamer@notesactions%
+  }
+}
+\newcommand*{\miniframeson}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframeson}
+\newcommand*{\miniframesoff}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframesoff}
+\makeatother
+% yellow
+\definecolor{goldenyellow}{rgb}{1.0, 0.87, 0.0}
+\definecolor{electricyellow}{rgb}{1.0, 1.0, 0.0}
+\definecolor{icterine}{rgb}{0.99, 0.97, 0.37}
+\definecolor{flavescent}{rgb}{0.97, 0.91, 0.56}
+\definecolor{lemon}{rgb}{1.0, 0.97, 0.0}
+% orange
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
+\definecolor{internationalorange}{rgb}{1.0, 0.31, 0.0}
+% red
+\definecolor{ferrarired}{rgb}{1.0, 0.11, 0.0}
+\definecolor{fireenginered}{rgb}{0.81, 0.09, 0.13}
+\definecolor{cadmiumred}{rgb}{0.89, 0.0, 0.13}
+% blue
+\definecolor{ao}{rgb}{0.0, 0.5, 0.0}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91}
+\definecolor{blue}{rgb}{0.0, 0.0, 1.0}
+\definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+\definecolor{darkmidnightblue}{rgb}{0.0, 0.2, 0.4}
+\definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
+\definecolor{deepskyblue}{rgb}{0.0, 0.75, 1.0}
+\definecolor{iris}{rgb}{0.35, 0.31, 0.81}
+\definecolor{navyblue}{rgb}{0.0, 0.0, 0.5}
+\definecolor{ultramarine}{rgb}{0.07, 0.04, 0.56}
+\definecolor{electricultramarine}{rgb}{0.25, 0.0, 1.0}
+% green
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
+\usetheme{Berlin}
+\usecolortheme{default}
+\usefonttheme{default}
+\setbeamercolor{structure}{fg=blue}
+\setbeamerfont{frametitle}{size=\footnotesize}
+\usepackage{graphicx}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\floatpagefraction}{1.0}
+\begin{document}
+\title{Report of Experiment ExpD. k-Symmetry: Training Neural Networks. GAs or DE?}
+\author{Andreas Geyer-Schulz}
+\date{\today}
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}
+\frametitle{Abstract}
+In this experiment we compare the training of feedforward neural networks with topology $(k, 2k, k, 1)$ for k-symmetry problems ($k\in 2, \dots, 6$) for a genetic algorithm and a differential evolution algorithm.%\end{abstract}
+\end{frame}
+\begin{frame}[t, allowframebreaks]
+\frametitle{Contents}
+\tableofcontents[subsubsectionstyle=hide]
+\vfill
+\end{frame}
+% report/ExpDmain001.tex
+\miniframeson
+\section{Design of Experiment}
+% report/ExpDmain002.tex
+\begin{frame}
+\vspace*{2mm}
+\begin{block}{
+Description of Experiment
+}
+The purpose of this computational experiment is to find out
+which algorithm performs better, genetic algorithms or differential evolution
+for the training of a feed-forward neural network for k-symmetry problems.
+ 
+The {\bf problem environment} is the k-symmetry problem: 
+Finding a boolean expression (with and, or, and not)
+which is TRUE for symmetric k-bit strings.
+ 
+The {\bf solution method} is grammar-based genetic programming
+(options {\tt algorithm="sga"} and {\tt algorithm="sgde"}  of {\tt xegaRun}).
+The {\bf solver} used is {\tt xegaRun} from the R-package {\tt xega}.
+ 
+The experiment consists of 10 treatments, 2 algorithms for 5 problem sizes $k\in 2,\dots, 6$.
+\end{block}
+\end{frame}% report/ExpDmain003.tex
+\begin{frame}
+\frametitle{
+Description of Experiment
+}
+The control variable in this experiment is:
+\begin{itemize}
+\item The algorithm used for training the feed-forward neural network:
+\begin{itemize} 
+\item {\tt "sga"}: A simple binary genetic algorithm.
+\item {\tt "sgde"}: A differential evolution algorithm.
+\end{itemize}
+Both algorithms use a plain-vanilla standard parameter configuration.
+\end{itemize}
+\end{frame}% report/ExpDmain004.tex
+% ExpD
+% Table: Common Parameters of Experiment ExpD
+% Thu May  8 22:20:18 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Common Parameters of Experiment ExpD }
+\input{ExpDCommonTable000.tex}
+ \label{ExpDCommonTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDCommonTable000.tex}  
+% report/ExpDmain005.tex
+% ExpD
+% Table: Common Parameters of Experiment ExpD
+% Thu May  8 22:20:18 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Common Parameters of Experiment ExpD }
+\input{ExpDCommonTable001.tex}
+ \label{ExpDCommonTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDCommonTable001.tex}  
+% report/ExpDmain006.tex
+% ExpD
+% Table: Parameters of Treatments of Experiment ExpD
+% Thu May  8 22:20:18 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Parameters of Treatments of Experiment ExpD }
+\input{ExpDDifferentTable000.tex}
+ \label{ExpDDifferentTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDDifferentTable000.tex}  
+% report/ExpDmain007.tex
+\miniframeson
+\section{Analysis of Experiment}
+% report/ExpDmain008.tex
+\miniframeson
+\subsection{How long to find an optimal solution?}
+% report/ExpDmain009.tex
+% ExpD
+% Table: Matrix of Mean of Seconds.  Rows: k=2, 3, 4, 5, 6)
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Matrix of Mean of Seconds.  Rows: k=2, 3, 4, 5, 6) }
+\input{ExpDMeanMatrixTable000.tex}
+ \label{ExpDMeanMatrixTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDMeanMatrixTable000.tex}  
+% report/ExpDmain010.tex
+% ExpD
+% Table: Matrix of Mean of Generations.  Rows: k=2, 3, 4, 5, 6)
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Matrix of Mean of Generations.  Rows: k=2, 3, 4, 5, 6) }
+\input{ExpDMeanMatrixTable001.tex}
+ \label{ExpDMeanMatrixTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDMeanMatrixTable001.tex}  
+% report/ExpDmain011.tex
+% ExpD
+% Figure: Distribution of Number of Generations for k-symmetry problem 2k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \frametitle{ Distribution of Number of Generations for k-symmetry problem 2k }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDboxplottGenerations000.eps}
+ \end{center}
+ \label{ExpDboxplottGenerations000.eps}  
+ \end{frame}
+
+% report/ExpDmain012.tex
+% ExpD
+% Figure: Distribution of Number of Generations for k-symmetry problem 3k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \frametitle{ Distribution of Number of Generations for k-symmetry problem 3k }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDboxplottGenerations001.eps}
+ \end{center}
+ \label{ExpDboxplottGenerations001.eps}  
+ \end{frame}
+
+% report/ExpDmain013.tex
+% ExpD
+% Figure: Distribution of Number of Generations for k-symmetry problem 4k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \frametitle{ Distribution of Number of Generations for k-symmetry problem 4k }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDboxplottGenerations002.eps}
+ \end{center}
+ \label{ExpDboxplottGenerations002.eps}  
+ \end{frame}
+
+% report/ExpDmain014.tex
+% ExpD
+% Figure: Distribution of Number of Generations for k-symmetry problem 5k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \frametitle{ Distribution of Number of Generations for k-symmetry problem 5k }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDboxplottGenerations003.eps}
+ \end{center}
+ \label{ExpDboxplottGenerations003.eps}  
+ \end{frame}
+
+% report/ExpDmain015.tex
+% ExpD
+% Figure: Distribution of Number of Generations for k-symmetry problem 6k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \frametitle{ Distribution of Number of Generations for k-symmetry problem 6k }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDboxplottGenerations004.eps}
+ \end{center}
+ \label{ExpDboxplottGenerations004.eps}  
+ \end{frame}
+
+% report/ExpDmain016.tex
+\begin{frame}
+\frametitle{
+Result of Experiment
+}
+For the 2, 3, 4, and 5-symmetry problems,
+{\bf differential evolution} needs {\bf statistically significant fewer} generations
+(non-overlapping notches in all Box-plots) than a {\bf genetic algorithm}.
+ 
+{\bf Differential evolution} should be preferred.
+ 
+For $k=6$ (and beyond) the parameter {\tt generation} should be increased considerably
+for both algorithms.
+\end{frame}% report/ExpDmain017.tex
+\begin{frame}
+\vspace*{2mm}
+\begin{block}{
+Suggestions for Further Experiments
+}
+\begin{itemize}
+\item The fitness function of the NN and the error rate do not correspond.
+       The reporting mechanism of the experiment shoud be adapted to report both performance measures.
+\item The convexity of the NN loss function has not been exploited.
+       Experiments with fitness scaling (genetic algorithms)
+       and selection functions (differential evolution) should be performed.
+\item Repeat the experiment with optimal parameters for both algorithms.
+       Find optimal hyper-parameters for both algorithms first!
+\item Study the balance between population size and number of generations needed!
+\end{itemize}
+\end{block}
+\end{frame}% report/ExpDmain018.tex
+\miniframeson
+\section{A Summary}
+% report/ExpDmain019.tex
+% ExpD
+% Table: Summary of statistics of experiment ExpD.
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Summary of statistics of experiment ExpD. }
+\input{ExpDStatsTable000.tex}
+ \label{ExpDStatsTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable000.tex}  
+% report/ExpDmain020.tex
+% ExpD
+% Table: Summary of statistics of experiment ExpD.
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Summary of statistics of experiment ExpD. }
+\input{ExpDStatsTable001.tex}
+ \label{ExpDStatsTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable001.tex}  
+% report/ExpDmain021.tex
+% ExpD
+% Table: Summary of statistics of experiment ExpD.
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Summary of statistics of experiment ExpD. }
+\input{ExpDStatsTable002.tex}
+ \label{ExpDStatsTable002.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable002.tex}  
+% report/ExpDmain022.tex
+\miniframesoff
+\section{B Treatments}
+% report/ExpDmain023.tex
+\miniframesoff
+\subsection{Treatment NNtop1sga2k}
+% report/ExpDmain024.tex
+% ExpD
+% Table:  Parameters of treatment: NNtop1sga2k 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: NNtop1sga2k 
+ }
+\input{ExpDtParmTable000.tex}
+ \label{ExpDtParmTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable000.tex}  
+% report/ExpDmain025.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sga2k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sga2k passed to xegaRun
+ }
+\input{ExpDtParmTable001.tex}
+ \label{ExpDtParmTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable001.tex}  
+% report/ExpDmain026.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sga2k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sga2k passed to xegaRun
+ }
+\input{ExpDtParmTable002.tex}
+ \label{ExpDtParmTable002.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable002.tex}  
+% report/ExpDmain027.tex
+% ExpD
+% Table: Treatment: NNtop1sga2k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: NNtop1sga2k }
+\input{ExpDStatsTable003.tex}
+ \label{ExpDStatsTable003.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable003.tex}  
+% report/ExpDmain028.tex
+% ExpD
+% Table: Solution of treatment NNtop1sga2k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Solution of treatment NNtop1sga2k }
+\input{ExpDSolutionTable000.tex}
+ \label{ExpDSolutionTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable000.tex}  
+% report/ExpDmain029.tex
+% ExpD
+% Table: Cases of treatment NNtop1sga2k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sga2k }
+\input{ExpDSolutionTable001.tex}
+ \label{ExpDSolutionTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable001.tex}  
+% report/ExpDmain030.tex
+% ExpD
+% Table: Layer: 1 Neurons: 2  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 1 Neurons: 2  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable000.tex}
+ \label{ExpDNNWeightTable000.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable000.tex}  
+% report/ExpDmain031.tex
+% ExpD
+% Table: Layer: 2 Neurons: 4  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 2 Neurons: 4  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable001.tex}
+ \label{ExpDNNWeightTable001.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable001.tex}  
+% report/ExpDmain032.tex
+% ExpD
+% Table: Layer: 3 Neurons: 2  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 3 Neurons: 2  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable002.tex}
+ \label{ExpDNNWeightTable002.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable002.tex}  
+% report/ExpDmain033.tex
+% ExpD
+% Figure: Plot of last xegaRun for Treatment NNtop1sga2k of Experiment ExpD
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment NNtop1sga2k of Experiment ExpD }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDPlotPopStatsFigure000.eps}
+ \end{center}
+ \label{report/ExpDPlotPopStatsFigure000.eps}  
+ \end{frame}
+
+% report/ExpDmain034.tex
+\miniframesoff
+\subsection{Treatment NNtop1sga3k}
+% report/ExpDmain035.tex
+% ExpD
+% Table:  Parameters of treatment: NNtop1sga3k 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: NNtop1sga3k 
+ }
+\input{ExpDtParmTable003.tex}
+ \label{ExpDtParmTable003.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable003.tex}  
+% report/ExpDmain036.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sga3k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sga3k passed to xegaRun
+ }
+\input{ExpDtParmTable004.tex}
+ \label{ExpDtParmTable004.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable004.tex}  
+% report/ExpDmain037.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sga3k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sga3k passed to xegaRun
+ }
+\input{ExpDtParmTable005.tex}
+ \label{ExpDtParmTable005.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable005.tex}  
+% report/ExpDmain038.tex
+% ExpD
+% Table: Treatment: NNtop1sga3k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: NNtop1sga3k }
+\input{ExpDStatsTable004.tex}
+ \label{ExpDStatsTable004.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable004.tex}  
+% report/ExpDmain039.tex
+% ExpD
+% Table: Solution of treatment NNtop1sga3k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Solution of treatment NNtop1sga3k }
+\input{ExpDSolutionTable002.tex}
+ \label{ExpDSolutionTable002.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable002.tex}  
+% report/ExpDmain040.tex
+% ExpD
+% Table: Cases of treatment NNtop1sga3k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sga3k }
+\input{ExpDSolutionTable003.tex}
+ \label{ExpDSolutionTable003.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable003.tex}  
+% report/ExpDmain041.tex
+% ExpD
+% Table: Layer: 1 Neurons: 3  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 1 Neurons: 3  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable003.tex}
+ \label{ExpDNNWeightTable003.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable003.tex}  
+% report/ExpDmain042.tex
+% ExpD
+% Table: Layer: 2 Neurons: 6  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 2 Neurons: 6  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable004.tex}
+ \label{ExpDNNWeightTable004.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable004.tex}  
+% report/ExpDmain043.tex
+% ExpD
+% Table: Layer: 3 Neurons: 3  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 3 Neurons: 3  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable005.tex}
+ \label{ExpDNNWeightTable005.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable005.tex}  
+% report/ExpDmain044.tex
+% ExpD
+% Figure: Plot of last xegaRun for Treatment NNtop1sga3k of Experiment ExpD
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment NNtop1sga3k of Experiment ExpD }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDPlotPopStatsFigure001.eps}
+ \end{center}
+ \label{report/ExpDPlotPopStatsFigure001.eps}  
+ \end{frame}
+
+% report/ExpDmain045.tex
+\miniframesoff
+\subsection{Treatment NNtop1sga4k}
+% report/ExpDmain046.tex
+% ExpD
+% Table:  Parameters of treatment: NNtop1sga4k 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: NNtop1sga4k 
+ }
+\input{ExpDtParmTable006.tex}
+ \label{ExpDtParmTable006.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable006.tex}  
+% report/ExpDmain047.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sga4k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sga4k passed to xegaRun
+ }
+\input{ExpDtParmTable007.tex}
+ \label{ExpDtParmTable007.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable007.tex}  
+% report/ExpDmain048.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sga4k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sga4k passed to xegaRun
+ }
+\input{ExpDtParmTable008.tex}
+ \label{ExpDtParmTable008.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable008.tex}  
+% report/ExpDmain049.tex
+% ExpD
+% Table: Treatment: NNtop1sga4k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: NNtop1sga4k }
+\input{ExpDStatsTable005.tex}
+ \label{ExpDStatsTable005.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable005.tex}  
+% report/ExpDmain050.tex
+% ExpD
+% Table: Solution of treatment NNtop1sga4k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Solution of treatment NNtop1sga4k }
+\input{ExpDSolutionTable004.tex}
+ \label{ExpDSolutionTable004.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable004.tex}  
+% report/ExpDmain051.tex
+% ExpD
+% Table: Cases of treatment NNtop1sga4k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sga4k }
+\input{ExpDSolutionTable005.tex}
+ \label{ExpDSolutionTable005.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable005.tex}  
+% report/ExpDmain052.tex
+% ExpD
+% Table: Cases of treatment NNtop1sga4k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sga4k }
+\input{ExpDSolutionTable006.tex}
+ \label{ExpDSolutionTable006.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable006.tex}  
+% report/ExpDmain053.tex
+% ExpD
+% Table: Layer: 1 Neurons: 4  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 1 Neurons: 4  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable006.tex}
+ \label{ExpDNNWeightTable006.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable006.tex}  
+% report/ExpDmain054.tex
+% ExpD
+% Table: Layer: 2 Neurons: 8  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 2 Neurons: 8  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable007.tex}
+ \label{ExpDNNWeightTable007.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable007.tex}  
+% report/ExpDmain055.tex
+% ExpD
+% Table: Layer: 3 Neurons: 4  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 3 Neurons: 4  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable008.tex}
+ \label{ExpDNNWeightTable008.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable008.tex}  
+% report/ExpDmain056.tex
+% ExpD
+% Figure: Plot of last xegaRun for Treatment NNtop1sga4k of Experiment ExpD
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment NNtop1sga4k of Experiment ExpD }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDPlotPopStatsFigure002.eps}
+ \end{center}
+ \label{report/ExpDPlotPopStatsFigure002.eps}  
+ \end{frame}
+
+% report/ExpDmain057.tex
+\miniframesoff
+\subsection{Treatment NNtop1sga5k}
+% report/ExpDmain058.tex
+% ExpD
+% Table:  Parameters of treatment: NNtop1sga5k 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: NNtop1sga5k 
+ }
+\input{ExpDtParmTable009.tex}
+ \label{ExpDtParmTable009.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable009.tex}  
+% report/ExpDmain059.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sga5k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sga5k passed to xegaRun
+ }
+\input{ExpDtParmTable010.tex}
+ \label{ExpDtParmTable010.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable010.tex}  
+% report/ExpDmain060.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sga5k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sga5k passed to xegaRun
+ }
+\input{ExpDtParmTable011.tex}
+ \label{ExpDtParmTable011.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable011.tex}  
+% report/ExpDmain061.tex
+% ExpD
+% Table: Treatment: NNtop1sga5k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: NNtop1sga5k }
+\input{ExpDStatsTable006.tex}
+ \label{ExpDStatsTable006.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable006.tex}  
+% report/ExpDmain062.tex
+% ExpD
+% Table: Solution of treatment NNtop1sga5k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Solution of treatment NNtop1sga5k }
+\input{ExpDSolutionTable007.tex}
+ \label{ExpDSolutionTable007.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable007.tex}  
+% report/ExpDmain063.tex
+% ExpD
+% Table: Cases of treatment NNtop1sga5k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sga5k }
+\input{ExpDSolutionTable008.tex}
+ \label{ExpDSolutionTable008.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable008.tex}  
+% report/ExpDmain064.tex
+% ExpD
+% Table: Cases of treatment NNtop1sga5k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sga5k }
+\input{ExpDSolutionTable009.tex}
+ \label{ExpDSolutionTable009.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable009.tex}  
+% report/ExpDmain065.tex
+% ExpD
+% Table: Cases of treatment NNtop1sga5k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sga5k }
+\input{ExpDSolutionTable010.tex}
+ \label{ExpDSolutionTable010.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable010.tex}  
+% report/ExpDmain066.tex
+% ExpD
+% Table: Layer: 1 Neurons: 5  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 1 Neurons: 5  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable009.tex}
+ \label{ExpDNNWeightTable009.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable009.tex}  
+% report/ExpDmain067.tex
+% ExpD
+% Table: Layer: 2 Neurons: 10  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 2 Neurons: 10  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable010.tex}
+ \label{ExpDNNWeightTable010.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable010.tex}  
+% report/ExpDmain068.tex
+% ExpD
+% Table: Layer: 3 Neurons: 5  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 3 Neurons: 5  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable011.tex}
+ \label{ExpDNNWeightTable011.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable011.tex}  
+% report/ExpDmain069.tex
+% ExpD
+% Figure: Plot of last xegaRun for Treatment NNtop1sga5k of Experiment ExpD
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment NNtop1sga5k of Experiment ExpD }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDPlotPopStatsFigure003.eps}
+ \end{center}
+ \label{report/ExpDPlotPopStatsFigure003.eps}  
+ \end{frame}
+
+% report/ExpDmain070.tex
+\miniframesoff
+\subsection{Treatment NNtop1sga6k}
+% report/ExpDmain071.tex
+% ExpD
+% Table:  Parameters of treatment: NNtop1sga6k 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: NNtop1sga6k 
+ }
+\input{ExpDtParmTable012.tex}
+ \label{ExpDtParmTable012.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable012.tex}  
+% report/ExpDmain072.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sga6k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sga6k passed to xegaRun
+ }
+\input{ExpDtParmTable013.tex}
+ \label{ExpDtParmTable013.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable013.tex}  
+% report/ExpDmain073.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sga6k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sga6k passed to xegaRun
+ }
+\input{ExpDtParmTable014.tex}
+ \label{ExpDtParmTable014.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable014.tex}  
+% report/ExpDmain074.tex
+% ExpD
+% Table: Treatment: NNtop1sga6k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: NNtop1sga6k }
+\input{ExpDStatsTable007.tex}
+ \label{ExpDStatsTable007.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable007.tex}  
+% report/ExpDmain075.tex
+% ExpD
+% Table: Solution of treatment NNtop1sga6k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Solution of treatment NNtop1sga6k }
+\input{ExpDSolutionTable011.tex}
+ \label{ExpDSolutionTable011.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable011.tex}  
+% report/ExpDmain076.tex
+% ExpD
+% Table: Cases of treatment NNtop1sga6k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sga6k }
+\input{ExpDSolutionTable012.tex}
+ \label{ExpDSolutionTable012.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable012.tex}  
+% report/ExpDmain077.tex
+% ExpD
+% Table: Cases of treatment NNtop1sga6k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sga6k }
+\input{ExpDSolutionTable013.tex}
+ \label{ExpDSolutionTable013.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable013.tex}  
+% report/ExpDmain078.tex
+% ExpD
+% Table: Cases of treatment NNtop1sga6k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sga6k }
+\input{ExpDSolutionTable014.tex}
+ \label{ExpDSolutionTable014.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable014.tex}  
+% report/ExpDmain079.tex
+% ExpD
+% Table: Cases of treatment NNtop1sga6k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sga6k }
+\input{ExpDSolutionTable015.tex}
+ \label{ExpDSolutionTable015.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable015.tex}  
+% report/ExpDmain080.tex
+% ExpD
+% Table: Cases of treatment NNtop1sga6k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sga6k }
+\input{ExpDSolutionTable016.tex}
+ \label{ExpDSolutionTable016.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable016.tex}  
+% report/ExpDmain081.tex
+% ExpD
+% Table: Layer: 1 Neurons: 6  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 1 Neurons: 6  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable012.tex}
+ \label{ExpDNNWeightTable012.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable012.tex}  
+% report/ExpDmain082.tex
+% ExpD
+% Table: Layer: 2 Neurons: 12  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 2 Neurons: 12  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable013.tex}
+ \label{ExpDNNWeightTable013.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable013.tex}  
+% report/ExpDmain083.tex
+% ExpD
+% Table: Layer: 3 Neurons: 6  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 3 Neurons: 6  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable014.tex}
+ \label{ExpDNNWeightTable014.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable014.tex}  
+% report/ExpDmain084.tex
+% ExpD
+% Figure: Plot of last xegaRun for Treatment NNtop1sga6k of Experiment ExpD
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment NNtop1sga6k of Experiment ExpD }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDPlotPopStatsFigure004.eps}
+ \end{center}
+ \label{report/ExpDPlotPopStatsFigure004.eps}  
+ \end{frame}
+
+% report/ExpDmain085.tex
+\miniframesoff
+\subsection{Treatment NNtop1sgde2k}
+% report/ExpDmain086.tex
+% ExpD
+% Table:  Parameters of treatment: NNtop1sgde2k 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: NNtop1sgde2k 
+ }
+\input{ExpDtParmTable015.tex}
+ \label{ExpDtParmTable015.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable015.tex}  
+% report/ExpDmain087.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sgde2k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sgde2k passed to xegaRun
+ }
+\input{ExpDtParmTable016.tex}
+ \label{ExpDtParmTable016.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable016.tex}  
+% report/ExpDmain088.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sgde2k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sgde2k passed to xegaRun
+ }
+\input{ExpDtParmTable017.tex}
+ \label{ExpDtParmTable017.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable017.tex}  
+% report/ExpDmain089.tex
+% ExpD
+% Table: Treatment: NNtop1sgde2k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: NNtop1sgde2k }
+\input{ExpDStatsTable008.tex}
+ \label{ExpDStatsTable008.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable008.tex}  
+% report/ExpDmain090.tex
+% ExpD
+% Table: Solution of treatment NNtop1sgde2k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Solution of treatment NNtop1sgde2k }
+\input{ExpDSolutionTable017.tex}
+ \label{ExpDSolutionTable017.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable017.tex}  
+% report/ExpDmain091.tex
+% ExpD
+% Table: Cases of treatment NNtop1sgde2k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sgde2k }
+\input{ExpDSolutionTable018.tex}
+ \label{ExpDSolutionTable018.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable018.tex}  
+% report/ExpDmain092.tex
+% ExpD
+% Table: Layer: 1 Neurons: 2  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 1 Neurons: 2  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable015.tex}
+ \label{ExpDNNWeightTable015.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable015.tex}  
+% report/ExpDmain093.tex
+% ExpD
+% Table: Layer: 2 Neurons: 4  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 2 Neurons: 4  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable016.tex}
+ \label{ExpDNNWeightTable016.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable016.tex}  
+% report/ExpDmain094.tex
+% ExpD
+% Table: Layer: 3 Neurons: 2  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 3 Neurons: 2  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable017.tex}
+ \label{ExpDNNWeightTable017.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable017.tex}  
+% report/ExpDmain095.tex
+% ExpD
+% Figure: Plot of last xegaRun for Treatment NNtop1sgde2k of Experiment ExpD
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment NNtop1sgde2k of Experiment ExpD }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDPlotPopStatsFigure005.eps}
+ \end{center}
+ \label{report/ExpDPlotPopStatsFigure005.eps}  
+ \end{frame}
+
+% report/ExpDmain096.tex
+\miniframesoff
+\subsection{Treatment NNtop1sgde3k}
+% report/ExpDmain097.tex
+% ExpD
+% Table:  Parameters of treatment: NNtop1sgde3k 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: NNtop1sgde3k 
+ }
+\input{ExpDtParmTable018.tex}
+ \label{ExpDtParmTable018.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable018.tex}  
+% report/ExpDmain098.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sgde3k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sgde3k passed to xegaRun
+ }
+\input{ExpDtParmTable019.tex}
+ \label{ExpDtParmTable019.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable019.tex}  
+% report/ExpDmain099.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sgde3k passed to xegaRun
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sgde3k passed to xegaRun
+ }
+\input{ExpDtParmTable020.tex}
+ \label{ExpDtParmTable020.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable020.tex}  
+% report/ExpDmain100.tex
+% ExpD
+% Table: Treatment: NNtop1sgde3k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: NNtop1sgde3k }
+\input{ExpDStatsTable009.tex}
+ \label{ExpDStatsTable009.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable009.tex}  
+% report/ExpDmain101.tex
+% ExpD
+% Table: Solution of treatment NNtop1sgde3k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Solution of treatment NNtop1sgde3k }
+\input{ExpDSolutionTable019.tex}
+ \label{ExpDSolutionTable019.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable019.tex}  
+% report/ExpDmain102.tex
+% ExpD
+% Table: Cases of treatment NNtop1sgde3k
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sgde3k }
+\input{ExpDSolutionTable020.tex}
+ \label{ExpDSolutionTable020.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable020.tex}  
+% report/ExpDmain103.tex
+% ExpD
+% Table: Layer: 1 Neurons: 3  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 1 Neurons: 3  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable018.tex}
+ \label{ExpDNNWeightTable018.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable018.tex}  
+% report/ExpDmain104.tex
+% ExpD
+% Table: Layer: 2 Neurons: 6  $(b|W)^T$: 
+
+% Thu May  8 22:20:19 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 2 Neurons: 6  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable019.tex}
+ \label{ExpDNNWeightTable019.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable019.tex}  
+% report/ExpDmain105.tex
+% ExpD
+% Table: Layer: 3 Neurons: 3  $(b|W)^T$: 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 3 Neurons: 3  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable020.tex}
+ \label{ExpDNNWeightTable020.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable020.tex}  
+% report/ExpDmain106.tex
+% ExpD
+% Figure: Plot of last xegaRun for Treatment NNtop1sgde3k of Experiment ExpD
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment NNtop1sgde3k of Experiment ExpD }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDPlotPopStatsFigure006.eps}
+ \end{center}
+ \label{report/ExpDPlotPopStatsFigure006.eps}  
+ \end{frame}
+
+% report/ExpDmain107.tex
+\miniframesoff
+\subsection{Treatment NNtop1sgde4k}
+% report/ExpDmain108.tex
+% ExpD
+% Table:  Parameters of treatment: NNtop1sgde4k 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: NNtop1sgde4k 
+ }
+\input{ExpDtParmTable021.tex}
+ \label{ExpDtParmTable021.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable021.tex}  
+% report/ExpDmain109.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sgde4k passed to xegaRun
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sgde4k passed to xegaRun
+ }
+\input{ExpDtParmTable022.tex}
+ \label{ExpDtParmTable022.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable022.tex}  
+% report/ExpDmain110.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sgde4k passed to xegaRun
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sgde4k passed to xegaRun
+ }
+\input{ExpDtParmTable023.tex}
+ \label{ExpDtParmTable023.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable023.tex}  
+% report/ExpDmain111.tex
+% ExpD
+% Table: Treatment: NNtop1sgde4k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: NNtop1sgde4k }
+\input{ExpDStatsTable010.tex}
+ \label{ExpDStatsTable010.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable010.tex}  
+% report/ExpDmain112.tex
+% ExpD
+% Table: Solution of treatment NNtop1sgde4k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Solution of treatment NNtop1sgde4k }
+\input{ExpDSolutionTable021.tex}
+ \label{ExpDSolutionTable021.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable021.tex}  
+% report/ExpDmain113.tex
+% ExpD
+% Table: Cases of treatment NNtop1sgde4k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sgde4k }
+\input{ExpDSolutionTable022.tex}
+ \label{ExpDSolutionTable022.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable022.tex}  
+% report/ExpDmain114.tex
+% ExpD
+% Table: Cases of treatment NNtop1sgde4k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sgde4k }
+\input{ExpDSolutionTable023.tex}
+ \label{ExpDSolutionTable023.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable023.tex}  
+% report/ExpDmain115.tex
+% ExpD
+% Table: Layer: 1 Neurons: 4  $(b|W)^T$: 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 1 Neurons: 4  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable021.tex}
+ \label{ExpDNNWeightTable021.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable021.tex}  
+% report/ExpDmain116.tex
+% ExpD
+% Table: Layer: 2 Neurons: 8  $(b|W)^T$: 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 2 Neurons: 8  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable022.tex}
+ \label{ExpDNNWeightTable022.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable022.tex}  
+% report/ExpDmain117.tex
+% ExpD
+% Table: Layer: 3 Neurons: 4  $(b|W)^T$: 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 3 Neurons: 4  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable023.tex}
+ \label{ExpDNNWeightTable023.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable023.tex}  
+% report/ExpDmain118.tex
+% ExpD
+% Figure: Plot of last xegaRun for Treatment NNtop1sgde4k of Experiment ExpD
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment NNtop1sgde4k of Experiment ExpD }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDPlotPopStatsFigure007.eps}
+ \end{center}
+ \label{report/ExpDPlotPopStatsFigure007.eps}  
+ \end{frame}
+
+% report/ExpDmain119.tex
+\miniframesoff
+\subsection{Treatment NNtop1sgde5k}
+% report/ExpDmain120.tex
+% ExpD
+% Table:  Parameters of treatment: NNtop1sgde5k 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: NNtop1sgde5k 
+ }
+\input{ExpDtParmTable024.tex}
+ \label{ExpDtParmTable024.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable024.tex}  
+% report/ExpDmain121.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sgde5k passed to xegaRun
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sgde5k passed to xegaRun
+ }
+\input{ExpDtParmTable025.tex}
+ \label{ExpDtParmTable025.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable025.tex}  
+% report/ExpDmain122.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sgde5k passed to xegaRun
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sgde5k passed to xegaRun
+ }
+\input{ExpDtParmTable026.tex}
+ \label{ExpDtParmTable026.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable026.tex}  
+% report/ExpDmain123.tex
+% ExpD
+% Table: Treatment: NNtop1sgde5k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: NNtop1sgde5k }
+\input{ExpDStatsTable011.tex}
+ \label{ExpDStatsTable011.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable011.tex}  
+% report/ExpDmain124.tex
+% ExpD
+% Table: Solution of treatment NNtop1sgde5k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Solution of treatment NNtop1sgde5k }
+\input{ExpDSolutionTable024.tex}
+ \label{ExpDSolutionTable024.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable024.tex}  
+% report/ExpDmain125.tex
+% ExpD
+% Table: Cases of treatment NNtop1sgde5k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sgde5k }
+\input{ExpDSolutionTable025.tex}
+ \label{ExpDSolutionTable025.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable025.tex}  
+% report/ExpDmain126.tex
+% ExpD
+% Table: Cases of treatment NNtop1sgde5k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sgde5k }
+\input{ExpDSolutionTable026.tex}
+ \label{ExpDSolutionTable026.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable026.tex}  
+% report/ExpDmain127.tex
+% ExpD
+% Table: Cases of treatment NNtop1sgde5k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sgde5k }
+\input{ExpDSolutionTable027.tex}
+ \label{ExpDSolutionTable027.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable027.tex}  
+% report/ExpDmain128.tex
+% ExpD
+% Table: Layer: 1 Neurons: 5  $(b|W)^T$: 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 1 Neurons: 5  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable024.tex}
+ \label{ExpDNNWeightTable024.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable024.tex}  
+% report/ExpDmain129.tex
+% ExpD
+% Table: Layer: 2 Neurons: 10  $(b|W)^T$: 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 2 Neurons: 10  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable025.tex}
+ \label{ExpDNNWeightTable025.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable025.tex}  
+% report/ExpDmain130.tex
+% ExpD
+% Table: Layer: 3 Neurons: 5  $(b|W)^T$: 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 3 Neurons: 5  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable026.tex}
+ \label{ExpDNNWeightTable026.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable026.tex}  
+% report/ExpDmain131.tex
+% ExpD
+% Figure: Plot of last xegaRun for Treatment NNtop1sgde5k of Experiment ExpD
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment NNtop1sgde5k of Experiment ExpD }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDPlotPopStatsFigure008.eps}
+ \end{center}
+ \label{report/ExpDPlotPopStatsFigure008.eps}  
+ \end{frame}
+
+% report/ExpDmain132.tex
+\miniframesoff
+\subsection{Treatment NNtop1sgde6k}
+% report/ExpDmain133.tex
+% ExpD
+% Table:  Parameters of treatment: NNtop1sgde6k 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment: NNtop1sgde6k 
+ }
+\input{ExpDtParmTable027.tex}
+ \label{ExpDtParmTable027.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable027.tex}  
+% report/ExpDmain134.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sgde6k passed to xegaRun
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sgde6k passed to xegaRun
+ }
+\input{ExpDtParmTable028.tex}
+ \label{ExpDtParmTable028.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable028.tex}  
+% report/ExpDmain135.tex
+% ExpD
+% Table:  Parameters of treatment NNtop1sgde6k passed to xegaRun
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  Parameters of treatment NNtop1sgde6k passed to xegaRun
+ }
+\input{ExpDtParmTable029.tex}
+ \label{ExpDtParmTable029.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable029.tex}  
+% report/ExpDmain136.tex
+% ExpD
+% Table: Treatment: NNtop1sgde6k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Treatment: NNtop1sgde6k }
+\input{ExpDStatsTable012.tex}
+ \label{ExpDStatsTable012.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDStatsTable012.tex}  
+% report/ExpDmain137.tex
+% ExpD
+% Table: Solution of treatment NNtop1sgde6k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Solution of treatment NNtop1sgde6k }
+\input{ExpDSolutionTable028.tex}
+ \label{ExpDSolutionTable028.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable028.tex}  
+% report/ExpDmain138.tex
+% ExpD
+% Table: Cases of treatment NNtop1sgde6k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sgde6k }
+\input{ExpDSolutionTable029.tex}
+ \label{ExpDSolutionTable029.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable029.tex}  
+% report/ExpDmain139.tex
+% ExpD
+% Table: Cases of treatment NNtop1sgde6k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sgde6k }
+\input{ExpDSolutionTable030.tex}
+ \label{ExpDSolutionTable030.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable030.tex}  
+% report/ExpDmain140.tex
+% ExpD
+% Table: Cases of treatment NNtop1sgde6k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sgde6k }
+\input{ExpDSolutionTable031.tex}
+ \label{ExpDSolutionTable031.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable031.tex}  
+% report/ExpDmain141.tex
+% ExpD
+% Table: Cases of treatment NNtop1sgde6k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sgde6k }
+\input{ExpDSolutionTable032.tex}
+ \label{ExpDSolutionTable032.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable032.tex}  
+% report/ExpDmain142.tex
+% ExpD
+% Table: Cases of treatment NNtop1sgde6k
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Cases of treatment NNtop1sgde6k }
+\input{ExpDSolutionTable033.tex}
+ \label{ExpDSolutionTable033.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDSolutionTable033.tex}  
+% report/ExpDmain143.tex
+% ExpD
+% Table: Layer: 1 Neurons: 6  $(b|W)^T$: 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 1 Neurons: 6  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable027.tex}
+ \label{ExpDNNWeightTable027.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable027.tex}  
+% report/ExpDmain144.tex
+% ExpD
+% Table: Layer: 2 Neurons: 12  $(b|W)^T$: 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 2 Neurons: 12  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable028.tex}
+ \label{ExpDNNWeightTable028.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable028.tex}  
+% report/ExpDmain145.tex
+% ExpD
+% Table: Layer: 3 Neurons: 6  $(b|W)^T$: 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{ Layer: 3 Neurons: 6  $(b|W)^T$: 
+ }
+\input{ExpDNNWeightTable029.tex}
+ \label{ExpDNNWeightTable029.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDNNWeightTable029.tex}  
+% report/ExpDmain146.tex
+% ExpD
+% Figure: Plot of last xegaRun for Treatment NNtop1sgde6k of Experiment ExpD
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \frametitle{ Plot of last xegaRun for Treatment NNtop1sgde6k of Experiment ExpD }
+ \begin{center}
+\includegraphics[width=0.5\textwidth, angle=-90]
+{ExpDPlotPopStatsFigure009.eps}
+ \end{center}
+ \label{report/ExpDPlotPopStatsFigure009.eps}  
+ \end{frame}
+
+% report/ExpDmain147.tex
+\miniframeson
+\section{C xega}
+% report/ExpDmain148.tex
+% ExpD
+% Table:  All parameters of xegaRun of treatment NNtop1sga2k 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment NNtop1sga2k 
+ }
+\input{ExpDtParmTable030.tex}
+ \label{ExpDtParmTable030.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable030.tex}  
+% report/ExpDmain149.tex
+% ExpD
+% Table:  All parameters of xegaRun of treatment NNtop1sga2k 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment NNtop1sga2k 
+ }
+\input{ExpDtParmTable031.tex}
+ \label{ExpDtParmTable031.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable031.tex}  
+% report/ExpDmain150.tex
+% ExpD
+% Table:  All parameters of xegaRun of treatment NNtop1sga2k 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment NNtop1sga2k 
+ }
+\input{ExpDtParmTable032.tex}
+ \label{ExpDtParmTable032.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable032.tex}  
+% report/ExpDmain151.tex
+% ExpD
+% Table:  All parameters of xegaRun of treatment NNtop1sga2k 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment NNtop1sga2k 
+ }
+\input{ExpDtParmTable033.tex}
+ \label{ExpDtParmTable033.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable033.tex}  
+% report/ExpDmain152.tex
+% ExpD
+% Table:  All parameters of xegaRun of treatment NNtop1sga2k 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment NNtop1sga2k 
+ }
+\input{ExpDtParmTable034.tex}
+ \label{ExpDtParmTable034.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable034.tex}  
+% report/ExpDmain153.tex
+% ExpD
+% Table:  All parameters of xegaRun of treatment NNtop1sga2k 
+
+% Thu May  8 22:20:20 2025
+ \begin{frame}
+ \fontsize{8pt}{9pt}\selectfont
+ \frametitle{  All parameters of xegaRun of treatment NNtop1sga2k 
+ }
+\input{ExpDtParmTable035.tex}
+ \label{ExpDtParmTable035.tex}  
+ \end{frame}
+
+ % Label:  \label{ExpDtParmTable035.tex}  
+% report/ExpDmain154.tex
+\end{document}
