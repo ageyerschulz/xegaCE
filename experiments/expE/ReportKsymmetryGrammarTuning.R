@@ -77,7 +77,7 @@ experimentText(
 "\\item {\\bf T5}: With symmetric pairs and a new base function,", 
 "       the function sPair(x, y) which implements",
 " ",
-"sPair $<-$ function)x,y) {OR(AND(x,y),AND(NOT(x),NOT(y)))}",
+"sPair $<-$ function(x,y) \\{OR(AND(x,y),AND(NOT(x),NOT(y)))\\}",
 "\\end{itemize}",
 "\\end{itemize}",
 header="Description of Experiment", block=FALSE,

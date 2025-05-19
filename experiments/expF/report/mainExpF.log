@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.4.11)  10 MAY 2025 18:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.4.11)  14 MAY 2025 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -906,7 +906,17 @@ thkerncmss.
 )
 [5
 
-] [6
+]
+LaTeX Font Info:    Trying to load font information for OMS+cmss on input line 
+109.
+LaTeX Font Info:    No file OMScmss.fd. on input line 109.
+
+
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 109.
+
+[6
 
 ] (./ExpFCommonTable000.tex) [7
 
@@ -938,12 +948,12 @@ Overfull \hbox (3.68274pt too wide) in paragraph at lines 5--22
 
 ]
 Package epstopdf Info: Source file: <ExpFboxplottSeconds000.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:45
 (epstopdf)                    size: 4983 bytes
 (epstopdf)             Output file: <ExpFboxplottSeconds000-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2025-05-10 18:58:59
-(epstopdf)                    size: 10466 bytes
+(epstopdf)                    date: 2025-05-14 17:36:08
+(epstopdf)                    size: 10464 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottSeconds000-eps
 -converted-to.pdf ExpFboxplottSeconds000.eps>
 (epstopdf)             \includegraphics on input line 224.
@@ -958,11 +968,11 @@ nput line 224.
 
  <./ExpFboxplottSeconds000-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottSeconds001.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:45
 (epstopdf)                    size: 4862 bytes
 (epstopdf)             Output file: <ExpFboxplottSeconds001-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2025-05-10 18:58:59
+(epstopdf)                    date: 2025-05-14 17:36:08
 (epstopdf)                    size: 10201 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottSeconds001-eps
 -converted-to.pdf ExpFboxplottSeconds001.eps>
@@ -978,11 +988,11 @@ nput line 237.
 
  <./ExpFboxplottSeconds001-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottSeconds002.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:45
 (epstopdf)                    size: 5031 bytes
 (epstopdf)             Output file: <ExpFboxplottSeconds002-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2025-05-10 18:59:00
+(epstopdf)                    date: 2025-05-14 17:36:08
 (epstopdf)                    size: 10334 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottSeconds002-eps
 -converted-to.pdf ExpFboxplottSeconds002.eps>
@@ -998,11 +1008,11 @@ nput line 250.
 
  <./ExpFboxplottSeconds002-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottSeconds003.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:45
 (epstopdf)                    size: 4804 bytes
 (epstopdf)             Output file: <ExpFboxplottSeconds003-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2025-05-10 18:59:00
+(epstopdf)                    date: 2025-05-14 17:36:09
 (epstopdf)                    size: 10162 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottSeconds003-eps
 -converted-to.pdf ExpFboxplottSeconds003.eps>
@@ -1018,12 +1028,12 @@ nput line 263.
 
  <./ExpFboxplottSeconds003-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottSeconds004.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:45
 (epstopdf)                    size: 4829 bytes
 (epstopdf)             Output file: <ExpFboxplottSeconds004-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2025-05-10 18:59:00
-(epstopdf)                    size: 10077 bytes
+(epstopdf)                    date: 2025-05-14 17:36:09
+(epstopdf)                    size: 10076 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottSeconds004-eps
 -converted-to.pdf ExpFboxplottSeconds004.eps>
 (epstopdf)             \includegraphics on input line 276.
@@ -1038,12 +1048,12 @@ nput line 276.
 
  <./ExpFboxplottSeconds004-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottSeconds005.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:45
 (epstopdf)                    size: 4717 bytes
 (epstopdf)             Output file: <ExpFboxplottSeconds005-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2025-05-10 18:59:00
-(epstopdf)                    size: 9816 bytes
+(epstopdf)                    date: 2025-05-14 17:36:10
+(epstopdf)                    size: 9817 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottSeconds005-eps
 -converted-to.pdf ExpFboxplottSeconds005.eps>
 (epstopdf)             \includegraphics on input line 289.
@@ -1058,12 +1068,12 @@ nput line 289.
 
  <./ExpFboxplottSeconds005-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottSeconds006.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:45
 (epstopdf)                    size: 4927 bytes
 (epstopdf)             Output file: <ExpFboxplottSeconds006-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2025-05-10 18:59:01
-(epstopdf)                    size: 10295 bytes
+(epstopdf)                    date: 2025-05-14 17:36:10
+(epstopdf)                    size: 10294 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottSeconds006-eps
 -converted-to.pdf ExpFboxplottSeconds006.eps>
 (epstopdf)             \includegraphics on input line 302.
@@ -1078,12 +1088,12 @@ nput line 302.
 
  <./ExpFboxplottSeconds006-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottSeconds007.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:45
 (epstopdf)                    size: 4887 bytes
 (epstopdf)             Output file: <ExpFboxplottSeconds007-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2025-05-10 18:59:01
-(epstopdf)                    size: 10205 bytes
+(epstopdf)                    date: 2025-05-14 17:36:11
+(epstopdf)                    size: 10204 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottSeconds007-eps
 -converted-to.pdf ExpFboxplottSeconds007.eps>
 (epstopdf)             \includegraphics on input line 315.
@@ -1098,11 +1108,11 @@ nput line 315.
 
  <./ExpFboxplottSeconds007-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottSeconds008.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4885 bytes
 (epstopdf)             Output file: <ExpFboxplottSeconds008-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2025-05-10 18:59:01
+(epstopdf)                    date: 2025-05-14 17:36:11
 (epstopdf)                    size: 10206 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottSeconds008-eps
 -converted-to.pdf ExpFboxplottSeconds008.eps>
@@ -1118,11 +1128,11 @@ nput line 328.
 
  <./ExpFboxplottSeconds008-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottSeconds009.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4726 bytes
 (epstopdf)             Output file: <ExpFboxplottSeconds009-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2025-05-10 18:59:01
+(epstopdf)                    date: 2025-05-14 17:36:12
 (epstopdf)                    size: 9685 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottSeconds009-eps
 -converted-to.pdf ExpFboxplottSeconds009.eps>
@@ -1138,11 +1148,11 @@ nput line 341.
 
  <./ExpFboxplottSeconds009-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottSeconds010.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4833 bytes
 (epstopdf)             Output file: <ExpFboxplottSeconds010-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2025-05-10 18:59:02
+(epstopdf)                    date: 2025-05-14 17:36:12
 (epstopdf)                    size: 9923 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottSeconds010-eps
 -converted-to.pdf ExpFboxplottSeconds010.eps>
@@ -1158,12 +1168,12 @@ nput line 354.
 
  <./ExpFboxplottSeconds010-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottGenerations000.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4731 bytes
 (epstopdf)             Output file: <ExpFboxplottGenerations000-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2025-05-10 18:59:02
-(epstopdf)                    size: 10180 bytes
+(epstopdf)                    date: 2025-05-14 17:36:13
+(epstopdf)                    size: 10182 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottGenerations000
 -eps-converted-to.pdf ExpFboxplottGenerations000.eps>
 (epstopdf)             \includegraphics on input line 367.
@@ -1179,11 +1189,11 @@ on input line 367.
 
  <./ExpFboxplottGenerations000-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottGenerations001.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4731 bytes
 (epstopdf)             Output file: <ExpFboxplottGenerations001-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2025-05-10 18:59:02
+(epstopdf)                    date: 2025-05-14 17:36:13
 (epstopdf)                    size: 10301 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottGenerations001
 -eps-converted-to.pdf ExpFboxplottGenerations001.eps>
@@ -1200,11 +1210,11 @@ on input line 380.
 
  <./ExpFboxplottGenerations001-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottGenerations002.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4811 bytes
 (epstopdf)             Output file: <ExpFboxplottGenerations002-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2025-05-10 18:59:02
+(epstopdf)                    date: 2025-05-14 17:36:14
 (epstopdf)                    size: 10249 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottGenerations002
 -eps-converted-to.pdf ExpFboxplottGenerations002.eps>
@@ -1222,12 +1232,12 @@ on input line 393.
 
  <./ExpFboxplottGenerations002-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottGenerations003.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4731 bytes
 (epstopdf)             Output file: <ExpFboxplottGenerations003-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2025-05-10 18:59:02
-(epstopdf)                    size: 10180 bytes
+(epstopdf)                    date: 2025-05-14 17:36:14
+(epstopdf)                    size: 10182 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottGenerations003
 -eps-converted-to.pdf ExpFboxplottGenerations003.eps>
 (epstopdf)             \includegraphics on input line 406.
@@ -1243,12 +1253,12 @@ on input line 406.
 
  <./ExpFboxplottGenerations003-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottGenerations004.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4849 bytes
 (epstopdf)             Output file: <ExpFboxplottGenerations004-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2025-05-10 18:59:03
-(epstopdf)                    size: 10216 bytes
+(epstopdf)                    date: 2025-05-14 17:36:15
+(epstopdf)                    size: 10214 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottGenerations004
 -eps-converted-to.pdf ExpFboxplottGenerations004.eps>
 (epstopdf)             \includegraphics on input line 419.
@@ -1264,11 +1274,11 @@ on input line 419.
 
  <./ExpFboxplottGenerations004-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottGenerations005.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4872 bytes
 (epstopdf)             Output file: <ExpFboxplottGenerations005-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2025-05-10 18:59:03
+(epstopdf)                    date: 2025-05-14 17:36:15
 (epstopdf)                    size: 10038 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottGenerations005
 -eps-converted-to.pdf ExpFboxplottGenerations005.eps>
@@ -1285,12 +1295,12 @@ on input line 432.
 
  <./ExpFboxplottGenerations005-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottGenerations006.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4856 bytes
 (epstopdf)             Output file: <ExpFboxplottGenerations006-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2025-05-10 18:59:03
-(epstopdf)                    size: 10329 bytes
+(epstopdf)                    date: 2025-05-14 17:36:16
+(epstopdf)                    size: 10327 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottGenerations006
 -eps-converted-to.pdf ExpFboxplottGenerations006.eps>
 (epstopdf)             \includegraphics on input line 445.
@@ -1306,12 +1316,12 @@ on input line 445.
 
  <./ExpFboxplottGenerations006-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottGenerations007.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4740 bytes
 (epstopdf)             Output file: <ExpFboxplottGenerations007-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2025-05-10 18:59:03
-(epstopdf)                    size: 10140 bytes
+(epstopdf)                    date: 2025-05-14 17:36:16
+(epstopdf)                    size: 10142 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottGenerations007
 -eps-converted-to.pdf ExpFboxplottGenerations007.eps>
 (epstopdf)             \includegraphics on input line 458.
@@ -1327,11 +1337,11 @@ on input line 458.
 
  <./ExpFboxplottGenerations007-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottGenerations008.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4818 bytes
 (epstopdf)             Output file: <ExpFboxplottGenerations008-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2025-05-10 18:59:04
+(epstopdf)                    date: 2025-05-14 17:36:16
 (epstopdf)                    size: 10075 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottGenerations008
 -eps-converted-to.pdf ExpFboxplottGenerations008.eps>
@@ -1348,11 +1358,11 @@ on input line 471.
 
  <./ExpFboxplottGenerations008-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottGenerations009.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4751 bytes
 (epstopdf)             Output file: <ExpFboxplottGenerations009-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2025-05-10 18:59:04
+(epstopdf)                    date: 2025-05-14 17:36:17
 (epstopdf)                    size: 9910 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottGenerations009
 -eps-converted-to.pdf ExpFboxplottGenerations009.eps>
@@ -1369,11 +1379,11 @@ on input line 484.
 
  <./ExpFboxplottGenerations009-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottGenerations010.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 4900 bytes
 (epstopdf)             Output file: <ExpFboxplottGenerations010-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2025-05-10 18:59:04
+(epstopdf)                    date: 2025-05-14 17:36:17
 (epstopdf)                    size: 10417 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottGenerations010
 -eps-converted-to.pdf ExpFboxplottGenerations010.eps>
@@ -1392,12 +1402,12 @@ on input line 497.
 
 ]
 Package epstopdf Info: Source file: <ExpFboxplottGenerations011.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 10613 bytes
 (epstopdf)             Output file: <ExpFboxplottGenerations011-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2025-05-10 18:59:04
-(epstopdf)                    size: 11827 bytes
+(epstopdf)                    date: 2025-05-14 17:36:17
+(epstopdf)                    size: 11825 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottGenerations011
 -eps-converted-to.pdf ExpFboxplottGenerations011.eps>
 (epstopdf)             \includegraphics on input line 521.
@@ -1413,12 +1423,12 @@ on input line 521.
 
  <./ExpFboxplottGenerations011-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ExpFboxplottSeconds011.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 10740 bytes
 (epstopdf)             Output file: <ExpFboxplottSeconds011-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2025-05-10 18:59:05
-(epstopdf)                    size: 11986 bytes
+(epstopdf)                    date: 2025-05-14 17:36:17
+(epstopdf)                    size: 11985 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFboxplottSeconds011-eps
 -converted-to.pdf ExpFboxplottSeconds011.eps>
 (epstopdf)             \includegraphics on input line 534.
@@ -1487,11 +1497,11 @@ Package pdftex.def Info: ExpFDerivationTreeFigure000.pdf  used on input line 71
 
  <./ExpFDerivationTreeFigure000.pdf>]
 Package epstopdf Info: Source file: <ExpFPlotPopStatsFigure000.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 5367 bytes
 (epstopdf)             Output file: <ExpFPlotPopStatsFigure000-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2025-05-10 18:59:05
+(epstopdf)                    date: 2025-05-14 17:36:18
 (epstopdf)                    size: 13051 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFPlotPopStatsFigure000-
 eps-converted-to.pdf ExpFPlotPopStatsFigure000.eps>
@@ -1542,11 +1552,11 @@ Package pdftex.def Info: ExpFDerivationTreeFigure001.pdf  used on input line 82
 
  <./ExpFDerivationTreeFigure001.pdf>]
 Package epstopdf Info: Source file: <ExpFPlotPopStatsFigure001.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:46
 (epstopdf)                    size: 5366 bytes
 (epstopdf)             Output file: <ExpFPlotPopStatsFigure001-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2025-05-10 18:59:05
+(epstopdf)                    date: 2025-05-14 17:36:18
 (epstopdf)                    size: 13090 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFPlotPopStatsFigure001-
 eps-converted-to.pdf ExpFPlotPopStatsFigure001.eps>
@@ -1597,11 +1607,11 @@ Package pdftex.def Info: ExpFDerivationTreeFigure002.pdf  used on input line 92
 
  <./ExpFDerivationTreeFigure002.pdf>]
 Package epstopdf Info: Source file: <ExpFPlotPopStatsFigure002.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:47
 (epstopdf)                    size: 5541 bytes
 (epstopdf)             Output file: <ExpFPlotPopStatsFigure002-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2025-05-10 18:59:06
+(epstopdf)                    date: 2025-05-14 17:36:19
 (epstopdf)                    size: 13061 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFPlotPopStatsFigure002-
 eps-converted-to.pdf ExpFPlotPopStatsFigure002.eps>
@@ -1652,11 +1662,11 @@ Package pdftex.def Info: ExpFDerivationTreeFigure003.pdf  used on input line 10
 
  <./ExpFDerivationTreeFigure003.pdf>]
 Package epstopdf Info: Source file: <ExpFPlotPopStatsFigure003.eps>
-(epstopdf)                    date: 2025-05-10 18:58:50
+(epstopdf)                    date: 2025-05-14 17:35:47
 (epstopdf)                    size: 5483 bytes
 (epstopdf)             Output file: <ExpFPlotPopStatsFigure003-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2025-05-10 18:59:06
+(epstopdf)                    date: 2025-05-14 17:36:19
 (epstopdf)                    size: 13082 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFPlotPopStatsFigure003-
 eps-converted-to.pdf ExpFPlotPopStatsFigure003.eps>
@@ -1711,12 +1721,12 @@ Package pdftex.def Info: ExpFDerivationTreeFigure004.pdf  used on input line 11
 
  <./ExpFDerivationTreeFigure004.pdf>]
 Package epstopdf Info: Source file: <ExpFPlotPopStatsFigure004.eps>
-(epstopdf)                    date: 2025-05-10 18:58:51
+(epstopdf)                    date: 2025-05-14 17:35:47
 (epstopdf)                    size: 5431 bytes
 (epstopdf)             Output file: <ExpFPlotPopStatsFigure004-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2025-05-10 18:59:07
-(epstopdf)                    size: 13101 bytes
+(epstopdf)                    date: 2025-05-14 17:36:19
+(epstopdf)                    size: 13103 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFPlotPopStatsFigure004-
 eps-converted-to.pdf ExpFPlotPopStatsFigure004.eps>
 (epstopdf)             \includegraphics on input line 1160.
@@ -1770,11 +1780,11 @@ Package pdftex.def Info: ExpFDerivationTreeFigure005.pdf  used on input line 12
 
  <./ExpFDerivationTreeFigure005.pdf>]
 Package epstopdf Info: Source file: <ExpFPlotPopStatsFigure005.eps>
-(epstopdf)                    date: 2025-05-10 18:58:51
+(epstopdf)                    date: 2025-05-14 17:35:47
 (epstopdf)                    size: 5645 bytes
 (epstopdf)             Output file: <ExpFPlotPopStatsFigure005-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2025-05-10 18:59:07
+(epstopdf)                    date: 2025-05-14 17:36:20
 (epstopdf)                    size: 13163 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFPlotPopStatsFigure005-
 eps-converted-to.pdf ExpFPlotPopStatsFigure005.eps>
@@ -1834,12 +1844,12 @@ Package pdftex.def Info: ExpFDerivationTreeFigure006.pdf  used on input line 13
 
  <./ExpFDerivationTreeFigure006.pdf>]
 Package epstopdf Info: Source file: <ExpFPlotPopStatsFigure006.eps>
-(epstopdf)                    date: 2025-05-10 18:58:51
+(epstopdf)                    date: 2025-05-14 17:35:48
 (epstopdf)                    size: 7818 bytes
 (epstopdf)             Output file: <ExpFPlotPopStatsFigure006-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2025-05-10 18:59:07
-(epstopdf)                    size: 13918 bytes
+(epstopdf)                    date: 2025-05-14 17:36:20
+(epstopdf)                    size: 13916 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFPlotPopStatsFigure006-
 eps-converted-to.pdf ExpFPlotPopStatsFigure006.eps>
 (epstopdf)             \includegraphics on input line 1378.
@@ -1898,12 +1908,12 @@ Package pdftex.def Info: ExpFDerivationTreeFigure007.pdf  used on input line 14
 
  <./ExpFDerivationTreeFigure007.pdf>]
 Package epstopdf Info: Source file: <ExpFPlotPopStatsFigure007.eps>
-(epstopdf)                    date: 2025-05-10 18:58:51
+(epstopdf)                    date: 2025-05-14 17:35:48
 (epstopdf)                    size: 6785 bytes
 (epstopdf)             Output file: <ExpFPlotPopStatsFigure007-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2025-05-10 18:59:08
-(epstopdf)                    size: 13494 bytes
+(epstopdf)                    date: 2025-05-14 17:36:21
+(epstopdf)                    size: 13492 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFPlotPopStatsFigure007-
 eps-converted-to.pdf ExpFPlotPopStatsFigure007.eps>
 (epstopdf)             \includegraphics on input line 1487.
@@ -1957,11 +1967,11 @@ Package pdftex.def Info: ExpFDerivationTreeFigure008.pdf  used on input line 15
 
  <./ExpFDerivationTreeFigure008.pdf>]
 Package epstopdf Info: Source file: <ExpFPlotPopStatsFigure008.eps>
-(epstopdf)                    date: 2025-05-10 18:58:51
+(epstopdf)                    date: 2025-05-14 17:35:48
 (epstopdf)                    size: 10585 bytes
 (epstopdf)             Output file: <ExpFPlotPopStatsFigure008-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2025-05-10 18:59:08
+(epstopdf)                    date: 2025-05-14 17:36:21
 (epstopdf)                    size: 15077 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFPlotPopStatsFigure008-
 eps-converted-to.pdf ExpFPlotPopStatsFigure008.eps>
@@ -2021,11 +2031,11 @@ Package pdftex.def Info: ExpFDerivationTreeFigure009.pdf  used on input line 16
 
  <./ExpFDerivationTreeFigure009.pdf>]
 Package epstopdf Info: Source file: <ExpFPlotPopStatsFigure009.eps>
-(epstopdf)                    date: 2025-05-10 18:58:51
+(epstopdf)                    date: 2025-05-14 17:35:49
 (epstopdf)                    size: 12419 bytes
 (epstopdf)             Output file: <ExpFPlotPopStatsFigure009-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2025-05-10 18:59:09
+(epstopdf)                    date: 2025-05-14 17:36:21
 (epstopdf)                    size: 15608 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFPlotPopStatsFigure009-
 eps-converted-to.pdf ExpFPlotPopStatsFigure009.eps>
@@ -2090,11 +2100,11 @@ Package pdftex.def Info: ExpFDerivationTreeFigure010.pdf  used on input line 18
 
  <./ExpFDerivationTreeFigure010.pdf>]
 Package epstopdf Info: Source file: <ExpFPlotPopStatsFigure010.eps>
-(epstopdf)                    date: 2025-05-10 18:58:51
+(epstopdf)                    date: 2025-05-14 17:35:49
 (epstopdf)                    size: 15735 bytes
 (epstopdf)             Output file: <ExpFPlotPopStatsFigure010-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2025-05-10 18:59:09
+(epstopdf)                    date: 2025-05-14 17:36:22
 (epstopdf)                    size: 16557 bytes
 (epstopdf)             Command: <repstopdf --outfile=ExpFPlotPopStatsFigure010-
 eps-converted-to.pdf ExpFPlotPopStatsFigure010.eps>
@@ -2140,6 +2150,9 @@ Overfull \hbox (1.7919pt too wide) in paragraph at lines 5--27
 
  (./mainExpF.aux)
 
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
@@ -2152,10 +2165,10 @@ Package rerunfilecheck Info: Checksums for `mainExpF.out':
 (rerunfilecheck)             After:  96E5E18D941861A7C35C7BF1C5989AF6;3178.
  ) 
 Here is how much of TeX's memory you used:
- 23418 strings out of 476041
- 468683 string characters out of 5793174
+ 23429 strings out of 476041
+ 468831 string characters out of 5793174
  1898388 words of memory out of 6000000
- 42680 multiletter control sequences out of 15000+600000
+ 42689 multiletter control sequences out of 15000+600000
  523599 words of font info for 73 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
  128i,19n,122p,396b,772s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2226,7 +2239,7 @@ public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmtt10.pfb>
-Output written on mainExpF.pdf (138 pages, 1218538 bytes).
+Output written on mainExpF.pdf (138 pages, 1219072 bytes).
 PDF statistics:
  11770 PDF objects out of 12825 (max. 8388607)
  11288 compressed objects within 113 object streams

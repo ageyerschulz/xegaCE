@@ -130,13 +130,13 @@ The two control variables in this experiment are
 \item {\bf T5}: With symmetric pairs and a new base function,
        the function sPair(x, y) which implements
  
-sPair $<-$ function)x,y) {OR(AND(x,y),AND(NOT(x),NOT(y)))}
+sPair $<-$ function(x,y) \{OR(AND(x,y),AND(NOT(x),NOT(y)))\}
 \end{itemize}
 \end{itemize}
 \end{frame}% report/ExpEmain006.tex
 % ExpE
 % Table: Common Parameters of Experiment ExpE
-% Thu May  8 17:40:53 2025
+% Wed May 14 17:33:39 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Common Parameters of Experiment ExpE }
@@ -148,7 +148,7 @@ sPair $<-$ function)x,y) {OR(AND(x,y),AND(NOT(x),NOT(y)))}
 % report/ExpEmain007.tex
 % ExpE
 % Table: Common Parameters of Experiment ExpE
-% Thu May  8 17:40:53 2025
+% Wed May 14 17:33:39 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Common Parameters of Experiment ExpE }
@@ -160,7 +160,7 @@ sPair $<-$ function)x,y) {OR(AND(x,y),AND(NOT(x),NOT(y)))}
 % report/ExpEmain008.tex
 % ExpE
 % Table: Parameters of Treatments of Experiment ExpE
-% Thu May  8 17:40:53 2025
+% Wed May 14 17:33:39 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Parameters of Treatments of Experiment ExpE }
@@ -178,7 +178,7 @@ sPair $<-$ function)x,y) {OR(AND(x,y),AND(NOT(x),NOT(y)))}
 % report/ExpEmain011.tex
 % ExpE
 % Table: Matrix of Mean of Errors (Fitness).  Rows: k=2, 3, 4, 5, 6)
-% Thu May  8 17:40:53 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Matrix of Mean of Errors (Fitness).  Rows: k=2, 3, 4, 5, 6) }
@@ -190,7 +190,7 @@ sPair $<-$ function)x,y) {OR(AND(x,y),AND(NOT(x),NOT(y)))}
 % report/ExpEmain012.tex
 % ExpE
 % Table: Matrix of Min of Errors (Fitness). Rows: k=2, 3, 4, 5, 6)
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Matrix of Min of Errors (Fitness). Rows: k=2, 3, 4, 5, 6) }
@@ -216,7 +216,7 @@ Do we always find the optimal program?
 % report/ExpEmain015.tex
 % ExpE
 % Table: Matrix of Mean of Seconds.  Rows: k=2, 3, 4, 5, 6)
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Matrix of Mean of Seconds.  Rows: k=2, 3, 4, 5, 6) }
@@ -228,7 +228,7 @@ Do we always find the optimal program?
 % report/ExpEmain016.tex
 % ExpE
 % Table: Matrix of Mean of Generations.  Rows: k=2, 3, 4, 5, 6)
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Matrix of Mean of Generations.  Rows: k=2, 3, 4, 5, 6) }
@@ -240,7 +240,7 @@ Do we always find the optimal program?
 % report/ExpEmain017.tex
 % ExpE
 % Figure: Distribution of Number of Generations for Grammars. 2k  symmetry.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \frametitle{ Distribution of Number of Generations for Grammars. 2k  symmetry. }
  \begin{center}
@@ -253,7 +253,7 @@ Do we always find the optimal program?
 % report/ExpEmain018.tex
 % ExpE
 % Figure: Distribution of Number of Generations for Grammars. 3k  symmetry.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \frametitle{ Distribution of Number of Generations for Grammars. 3k  symmetry. }
  \begin{center}
@@ -266,7 +266,7 @@ Do we always find the optimal program?
 % report/ExpEmain019.tex
 % ExpE
 % Figure: Distribution of Number of Generations for Grammars. 4k  symmetry.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \frametitle{ Distribution of Number of Generations for Grammars. 4k  symmetry. }
  \begin{center}
@@ -279,7 +279,7 @@ Do we always find the optimal program?
 % report/ExpEmain020.tex
 % ExpE
 % Figure: Distribution of Number of Generations for Grammars. 5k  symmetry.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \frametitle{ Distribution of Number of Generations for Grammars. 5k  symmetry. }
  \begin{center}
@@ -292,7 +292,7 @@ Do we always find the optimal program?
 % report/ExpEmain021.tex
 % ExpE
 % Figure: Distribution of Number of Generations for Grammars. 6k  symmetry.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \frametitle{ Distribution of Number of Generations for Grammars. 6k  symmetry. }
  \begin{center}
@@ -323,7 +323,7 @@ Statistically significant? Not tested. Expect highly significant.
 % report/ExpEmain024.tex
 % ExpE
 % Figure: Distribution of Number of Generations for Grammar T4
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \frametitle{ Distribution of Number of Generations for Grammar T4 }
  \begin{center}
@@ -336,7 +336,7 @@ Statistically significant? Not tested. Expect highly significant.
 % report/ExpEmain025.tex
 % ExpE
 % Figure: Distribution of Number of Generations for Grammar T5
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \frametitle{ Distribution of Number of Generations for Grammar T5 }
  \begin{center}
@@ -390,7 +390,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain029.tex
 % ExpE
 % Table: Summary of statistics of experiment ExpE.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Summary of statistics of experiment ExpE. }
@@ -402,7 +402,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain030.tex
 % ExpE
 % Table: Summary of statistics of experiment ExpE.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Summary of statistics of experiment ExpE. }
@@ -414,7 +414,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain031.tex
 % ExpE
 % Table: Summary of statistics of experiment ExpE.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Summary of statistics of experiment ExpE. }
@@ -433,7 +433,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment: BoolT4sgp2k 
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment: BoolT4sgp2k 
@@ -447,7 +447,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp2k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp2k passed to xegaRun
@@ -461,7 +461,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp2k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp2k passed to xegaRun
@@ -475,7 +475,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp2k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp2k passed to xegaRun
@@ -488,7 +488,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain038.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT4sgp2k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT4sgp2k of Experiment ExpE }
@@ -500,7 +500,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain039.tex
 % ExpE
 % Table: Treatment: BoolT4sgp2k
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Treatment: BoolT4sgp2k }
@@ -512,7 +512,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain040.tex
 % ExpE
 % Table: The Solution Table of Treatment BoolT4sgp2k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 31.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Solution Table of Treatment BoolT4sgp2k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 31. }
@@ -524,7 +524,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain041.tex
 % ExpE
 % Figure: The Derivation Tree of a Solution of Treatment BoolT4sgp2k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \frametitle{ The Derivation Tree of a Solution of Treatment BoolT4sgp2k of Experiment ExpE }
  \begin{center}
@@ -537,7 +537,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain042.tex
 % ExpE
 % Figure: Plot of last xegaRun for Treatment BoolT4sgp2k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \frametitle{ Plot of last xegaRun for Treatment BoolT4sgp2k of Experiment ExpE }
  \begin{center}
@@ -554,7 +554,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment: BoolT4sgp3k 
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment: BoolT4sgp3k 
@@ -568,7 +568,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp3k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp3k passed to xegaRun
@@ -582,7 +582,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp3k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp3k passed to xegaRun
@@ -596,7 +596,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp3k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp3k passed to xegaRun
@@ -609,7 +609,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain048.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT4sgp3k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:40 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT4sgp3k of Experiment ExpE }
@@ -621,7 +621,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain049.tex
 % ExpE
 % Table: Treatment: BoolT4sgp3k
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Treatment: BoolT4sgp3k }
@@ -633,7 +633,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain050.tex
 % ExpE
 % Table: The Solution Table of Treatment BoolT4sgp3k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 28.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Solution Table of Treatment BoolT4sgp3k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 28. }
@@ -645,7 +645,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain051.tex
 % ExpE
 % Figure: The Derivation Tree of a Solution of Treatment BoolT4sgp3k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \frametitle{ The Derivation Tree of a Solution of Treatment BoolT4sgp3k of Experiment ExpE }
  \begin{center}
@@ -658,7 +658,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain052.tex
 % ExpE
 % Figure: Plot of last xegaRun for Treatment BoolT4sgp3k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \frametitle{ Plot of last xegaRun for Treatment BoolT4sgp3k of Experiment ExpE }
  \begin{center}
@@ -675,7 +675,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment: BoolT4sgp4k 
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment: BoolT4sgp4k 
@@ -689,7 +689,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp4k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp4k passed to xegaRun
@@ -703,7 +703,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp4k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp4k passed to xegaRun
@@ -717,7 +717,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp4k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp4k passed to xegaRun
@@ -730,7 +730,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain058.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT4sgp4k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT4sgp4k of Experiment ExpE }
@@ -742,7 +742,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain059.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT4sgp4k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT4sgp4k of Experiment ExpE }
@@ -754,7 +754,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain060.tex
 % ExpE
 % Table: Treatment: BoolT4sgp4k
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Treatment: BoolT4sgp4k }
@@ -766,7 +766,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain061.tex
 % ExpE
 % Table: The Solution Table of Treatment BoolT4sgp4k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 68.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Solution Table of Treatment BoolT4sgp4k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 68. }
@@ -778,7 +778,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain062.tex
 % ExpE
 % Figure: The Derivation Tree of a Solution of Treatment BoolT4sgp4k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \frametitle{ The Derivation Tree of a Solution of Treatment BoolT4sgp4k of Experiment ExpE }
  \begin{center}
@@ -791,7 +791,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain063.tex
 % ExpE
 % Figure: Plot of last xegaRun for Treatment BoolT4sgp4k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \frametitle{ Plot of last xegaRun for Treatment BoolT4sgp4k of Experiment ExpE }
  \begin{center}
@@ -808,7 +808,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment: BoolT4sgp5k 
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment: BoolT4sgp5k 
@@ -822,7 +822,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp5k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp5k passed to xegaRun
@@ -836,7 +836,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp5k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp5k passed to xegaRun
@@ -850,7 +850,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp5k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp5k passed to xegaRun
@@ -863,7 +863,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain069.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT4sgp5k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT4sgp5k of Experiment ExpE }
@@ -875,7 +875,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain070.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT4sgp5k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT4sgp5k of Experiment ExpE }
@@ -887,7 +887,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain071.tex
 % ExpE
 % Table: Treatment: BoolT4sgp5k
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Treatment: BoolT4sgp5k }
@@ -899,7 +899,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain072.tex
 % ExpE
 % Table: The Solution Table of Treatment BoolT4sgp5k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 71.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Solution Table of Treatment BoolT4sgp5k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 71. }
@@ -911,7 +911,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain073.tex
 % ExpE
 % Figure: The Derivation Tree of a Solution of Treatment BoolT4sgp5k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \frametitle{ The Derivation Tree of a Solution of Treatment BoolT4sgp5k of Experiment ExpE }
  \begin{center}
@@ -924,7 +924,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain074.tex
 % ExpE
 % Figure: Plot of last xegaRun for Treatment BoolT4sgp5k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \frametitle{ Plot of last xegaRun for Treatment BoolT4sgp5k of Experiment ExpE }
  \begin{center}
@@ -941,7 +941,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment: BoolT4sgp6k 
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment: BoolT4sgp6k 
@@ -955,7 +955,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp6k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp6k passed to xegaRun
@@ -969,7 +969,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp6k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp6k passed to xegaRun
@@ -983,7 +983,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT4sgp6k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT4sgp6k passed to xegaRun
@@ -996,7 +996,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain080.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT4sgp6k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT4sgp6k of Experiment ExpE }
@@ -1008,7 +1008,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain081.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT4sgp6k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT4sgp6k of Experiment ExpE }
@@ -1020,7 +1020,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain082.tex
 % ExpE
 % Table: Treatment: BoolT4sgp6k
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Treatment: BoolT4sgp6k }
@@ -1032,7 +1032,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain083.tex
 % ExpE
 % Table: The Solution Table of Treatment BoolT4sgp6k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 13.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Solution Table of Treatment BoolT4sgp6k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 13. }
@@ -1044,7 +1044,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain084.tex
 % ExpE
 % Figure: The Derivation Tree of a Solution of Treatment BoolT4sgp6k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \frametitle{ The Derivation Tree of a Solution of Treatment BoolT4sgp6k of Experiment ExpE }
  \begin{center}
@@ -1057,7 +1057,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain085.tex
 % ExpE
 % Figure: Plot of last xegaRun for Treatment BoolT4sgp6k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \frametitle{ Plot of last xegaRun for Treatment BoolT4sgp6k of Experiment ExpE }
  \begin{center}
@@ -1074,7 +1074,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment: BoolT5sgp2k 
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment: BoolT5sgp2k 
@@ -1088,7 +1088,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp2k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp2k passed to xegaRun
@@ -1102,7 +1102,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp2k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp2k passed to xegaRun
@@ -1116,7 +1116,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp2k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp2k passed to xegaRun
@@ -1129,7 +1129,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain091.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT5sgp2k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT5sgp2k of Experiment ExpE }
@@ -1141,7 +1141,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain092.tex
 % ExpE
 % Table: Treatment: BoolT5sgp2k
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:41 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Treatment: BoolT5sgp2k }
@@ -1153,7 +1153,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain093.tex
 % ExpE
 % Table: The Solution Table of Treatment BoolT5sgp2k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 13.
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Solution Table of Treatment BoolT5sgp2k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 13. }
@@ -1165,7 +1165,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain094.tex
 % ExpE
 % Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp2k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp2k of Experiment ExpE }
  \begin{center}
@@ -1178,7 +1178,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain095.tex
 % ExpE
 % Figure: Plot of last xegaRun for Treatment BoolT5sgp2k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp2k of Experiment ExpE }
  \begin{center}
@@ -1195,7 +1195,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment: BoolT5sgp3k 
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment: BoolT5sgp3k 
@@ -1209,7 +1209,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp3k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp3k passed to xegaRun
@@ -1223,7 +1223,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp3k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp3k passed to xegaRun
@@ -1237,7 +1237,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp3k passed to xegaRun
 
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp3k passed to xegaRun
@@ -1250,7 +1250,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain101.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT5sgp3k of Experiment ExpE
-% Thu May  8 17:40:54 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT5sgp3k of Experiment ExpE }
@@ -1262,7 +1262,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain102.tex
 % ExpE
 % Table: Treatment: BoolT5sgp3k
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Treatment: BoolT5sgp3k }
@@ -1274,7 +1274,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain103.tex
 % ExpE
 % Table: The Solution Table of Treatment BoolT5sgp3k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 11.
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Solution Table of Treatment BoolT5sgp3k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 11. }
@@ -1286,7 +1286,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain104.tex
 % ExpE
 % Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp3k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp3k of Experiment ExpE }
  \begin{center}
@@ -1299,7 +1299,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain105.tex
 % ExpE
 % Figure: Plot of last xegaRun for Treatment BoolT5sgp3k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp3k of Experiment ExpE }
  \begin{center}
@@ -1316,7 +1316,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment: BoolT5sgp4k 
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment: BoolT5sgp4k 
@@ -1330,7 +1330,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp4k passed to xegaRun
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp4k passed to xegaRun
@@ -1344,7 +1344,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp4k passed to xegaRun
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp4k passed to xegaRun
@@ -1358,7 +1358,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp4k passed to xegaRun
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp4k passed to xegaRun
@@ -1371,7 +1371,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain111.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT5sgp4k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT5sgp4k of Experiment ExpE }
@@ -1383,7 +1383,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain112.tex
 % ExpE
 % Table: Treatment: BoolT5sgp4k
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Treatment: BoolT5sgp4k }
@@ -1395,7 +1395,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain113.tex
 % ExpE
 % Table: The Solution Table of Treatment BoolT5sgp4k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 39.
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Solution Table of Treatment BoolT5sgp4k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 39. }
@@ -1407,7 +1407,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain114.tex
 % ExpE
 % Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp4k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp4k of Experiment ExpE }
  \begin{center}
@@ -1420,7 +1420,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain115.tex
 % ExpE
 % Figure: Plot of last xegaRun for Treatment BoolT5sgp4k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp4k of Experiment ExpE }
  \begin{center}
@@ -1437,7 +1437,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment: BoolT5sgp5k 
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment: BoolT5sgp5k 
@@ -1451,7 +1451,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp5k passed to xegaRun
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp5k passed to xegaRun
@@ -1465,7 +1465,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp5k passed to xegaRun
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp5k passed to xegaRun
@@ -1479,7 +1479,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp5k passed to xegaRun
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp5k passed to xegaRun
@@ -1492,7 +1492,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain121.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT5sgp5k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT5sgp5k of Experiment ExpE }
@@ -1504,7 +1504,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain122.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT5sgp5k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT5sgp5k of Experiment ExpE }
@@ -1516,7 +1516,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain123.tex
 % ExpE
 % Table: Treatment: BoolT5sgp5k
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Treatment: BoolT5sgp5k }
@@ -1528,7 +1528,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain124.tex
 % ExpE
 % Table: The Solution Table of Treatment BoolT5sgp5k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 33.
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Solution Table of Treatment BoolT5sgp5k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 33. }
@@ -1540,7 +1540,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain125.tex
 % ExpE
 % Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp5k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp5k of Experiment ExpE }
  \begin{center}
@@ -1553,7 +1553,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain126.tex
 % ExpE
 % Figure: Plot of last xegaRun for Treatment BoolT5sgp5k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp5k of Experiment ExpE }
  \begin{center}
@@ -1570,7 +1570,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment: BoolT5sgp6k 
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment: BoolT5sgp6k 
@@ -1584,7 +1584,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp6k passed to xegaRun
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp6k passed to xegaRun
@@ -1598,7 +1598,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp6k passed to xegaRun
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp6k passed to xegaRun
@@ -1612,7 +1612,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  Parameters of treatment BoolT5sgp6k passed to xegaRun
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  Parameters of treatment BoolT5sgp6k passed to xegaRun
@@ -1625,7 +1625,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain132.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT5sgp6k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT5sgp6k of Experiment ExpE }
@@ -1637,7 +1637,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain133.tex
 % ExpE
 % Table: The Production Table of Treatment BoolT5sgp6k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Production Table of Treatment BoolT5sgp6k of Experiment ExpE }
@@ -1649,7 +1649,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain134.tex
 % ExpE
 % Table: Treatment: BoolT5sgp6k
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ Treatment: BoolT5sgp6k }
@@ -1661,7 +1661,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain135.tex
 % ExpE
 % Table: The Solution Table of Treatment BoolT5sgp6k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 75.
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{ The Solution Table of Treatment BoolT5sgp6k of Experiment ExpE. Fit: 0. Unique Shortest Solutions: 75. }
@@ -1673,7 +1673,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain136.tex
 % ExpE
 % Figure: The Derivation Tree of a Solution of Treatment BoolT5sgp6k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \frametitle{ The Derivation Tree of a Solution of Treatment BoolT5sgp6k of Experiment ExpE }
  \begin{center}
@@ -1686,7 +1686,7 @@ Grammar evolution from frontiers of derivation trees.
 % report/ExpEmain137.tex
 % ExpE
 % Figure: Plot of last xegaRun for Treatment BoolT5sgp6k of Experiment ExpE
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \frametitle{ Plot of last xegaRun for Treatment BoolT5sgp6k of Experiment ExpE }
  \begin{center}
@@ -1703,7 +1703,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  All parameters of xegaRun of treatment BoolT4sgp2k 
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:42 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  All parameters of xegaRun of treatment BoolT4sgp2k 
@@ -1717,7 +1717,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  All parameters of xegaRun of treatment BoolT4sgp2k 
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:43 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  All parameters of xegaRun of treatment BoolT4sgp2k 
@@ -1731,7 +1731,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  All parameters of xegaRun of treatment BoolT4sgp2k 
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:43 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  All parameters of xegaRun of treatment BoolT4sgp2k 
@@ -1745,7 +1745,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  All parameters of xegaRun of treatment BoolT4sgp2k 
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:43 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  All parameters of xegaRun of treatment BoolT4sgp2k 
@@ -1759,7 +1759,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  All parameters of xegaRun of treatment BoolT4sgp2k 
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:43 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  All parameters of xegaRun of treatment BoolT4sgp2k 
@@ -1773,7 +1773,7 @@ Grammar evolution from frontiers of derivation trees.
 % ExpE
 % Table:  All parameters of xegaRun of treatment BoolT4sgp2k 
 
-% Thu May  8 17:40:55 2025
+% Wed May 14 17:33:43 2025
  \begin{frame}
  \fontsize{8pt}{9pt}\selectfont
  \frametitle{  All parameters of xegaRun of treatment BoolT4sgp2k 

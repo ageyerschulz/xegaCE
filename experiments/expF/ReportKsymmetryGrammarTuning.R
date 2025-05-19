@@ -57,7 +57,7 @@ experimentText(
 "\\item And a new base function,", 
 "       the function sPair(x, y) which is implemented by",
 " ",
-" sPair $<-$ function(x,y) {OR(AND(x,y),AND(NOT(x),NOT(y)))}",
+" sPair $<-$ function(x,y) \\{OR(AND(x,y),AND(NOT(x),NOT(y)))\\}",
 "\\end{enumerate}",
 "\\end{itemize}",
 header="Description of Experiment", block=FALSE,
